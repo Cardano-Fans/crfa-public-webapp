@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
       <main>
         <section className="hero">
-          <div id="wrapper" className="absolute">
+          <div id="wrapper">
             <canvas
               id="canvas"
               className="canvas"

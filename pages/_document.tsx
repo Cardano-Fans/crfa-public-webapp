@@ -8,7 +8,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="canonical" href="https://cardano.fans/" />
           <link rel="shortlink" href="https://cardano.fans/" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
           <meta name="robots" content="max-image-preview:large" />
 
           <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
