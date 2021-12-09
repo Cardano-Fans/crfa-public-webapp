@@ -1,3 +1,5 @@
+import { GithubButton, TwitterButton, TelegramButton } from './SocialButton'
+
 export const Header: React.FC<{}> = () => {
   return (
     <header className="header relative">
@@ -41,22 +43,10 @@ export const Header: React.FC<{}> = () => {
               <a href="/#contact">Contact</a>
             </li>
           </ul>
-          <div className="hidden lg:flex items-center justify-between">
-            <a href="https://t.me/freedom_cardano" className="social-link mr-4">
-              <i
-                className="fab fa-telegram-plane social-nav"
-                aria-hidden="true"
-              />
-            </a>
-            <a
-              href="https://twitter.com/matiwinnetou"
-              className="social-link mr-4"
-            >
-              <i className="fab fa-twitter social-nav" aria-hidden="true" />
-            </a>
-            <a href="https://github.com/Cardano-Fans" className="social-link">
-              <i className="fab fa-github social-nav" aria-hidden="true" />
-            </a>
+          <div className="hidden lg:flex items-center justify-between space-x-4">
+            <TelegramButton size="sm" variant="primary" />
+            <TwitterButton size="sm" variant="primary" />
+            <GithubButton size="sm" variant="primary" />
           </div>
         </nav>
         <div className="mobile-nav lg:hidden">
@@ -126,33 +116,9 @@ export const Header: React.FC<{}> = () => {
                   </ul>
                 </div>
                 <div className="flex lg:hidden items-center justify-between ml-8 mb-40 w-1/2">
-                  <a
-                    href="https://t.me/freedom_cardano"
-                    className="social-link mr-4"
-                  >
-                    <i
-                      className="fab fa-telegram-plane social-nav"
-                      aria-hidden="true"
-                    />
-                  </a>
-                  <a
-                    href="https://twitter.com/matiwinnetou"
-                    className="social-link mr-4"
-                  >
-                    <i
-                      className="fab fa-twitter social-nav"
-                      aria-hidden="true"
-                    />
-                  </a>
-                  <a
-                    href="https://github.com/Cardano-Fans"
-                    className="social-link"
-                  >
-                    <i
-                      className="fab fa-github social-nav"
-                      aria-hidden="true"
-                    />
-                  </a>
+                  <TelegramButton size="md" variant="secondary" />
+                  <TwitterButton size="md" variant="secondary" />
+                  <GithubButton size="md" variant="secondary" />
                 </div>
               </div>
             </div>

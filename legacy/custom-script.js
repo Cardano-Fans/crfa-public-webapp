@@ -1,34 +1,8 @@
 import AOS from 'aos'
-import Swiper from 'swiper/bundle'
 
 import 'aos/dist/aos.css'
-import 'swiper/css/bundle'
 
 export function customScript() {
-  ////////////
-  // Slider Init
-  let swiper = new Swiper('.mySwiper', {
-    effect: 'creative',
-    creativeEffect: {
-      prev: {
-        shadow: false,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ['100%', 0, 0],
-      },
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
-
-  ////////////
   // Copy pool ID
   document.addEventListener('DOMContentLoaded', function () {
     const copyButton = document.getElementById('copyId')
