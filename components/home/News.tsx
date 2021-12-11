@@ -43,10 +43,28 @@ export const News: React.FC = () => {
 
         <div>
           {status === 'loading' && <p className="text-white">Loading...</p>}
+          {status === 'error' && (
+            <div className="text-white">
+              <p className="mb-3">
+                Sorry, we cannot load preview of our blog posts at the moment.
+              </p>
+              <p>
+                But you can always directly check out{' '}
+                <a
+                  href="https://cardano-fans.medium.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  our blog
+                </a>
+              </p>
+            </div>
+          )}
           {status === 'loaded' && (
             <Swiper
               pagination={{
                 dynamicBullets: true,
+                clickable: true,
               }}
               spaceBetween={20}
               slidesPerView={3}
