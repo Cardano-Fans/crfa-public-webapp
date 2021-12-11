@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
               data-aos="fade-right"
               data-aos-delay={300}
             >
-              <div className="text-2xl mb-6">Do you have any questions?</div>
+              <div className="text-2xl mb-7">Do you have any questions?</div>
 
               <a
                 href="mailto:fanscardano@gmail.com"
@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="bg-white px-6 py-3 rounded-full text-dark"
               >
-                Send us a message!
+                Send us message
               </a>
             </div>
           </div>

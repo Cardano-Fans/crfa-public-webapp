@@ -95,7 +95,7 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
 
         <h3 className="text-white text-lg">{post.title}</h3>
       </a>
-      <div className="text-base text-white">
+      <div className="text-sm text-white">
         {dayjs(post.pubDate).format('MMM DD, YYYY')}
       </div>
     </div>
