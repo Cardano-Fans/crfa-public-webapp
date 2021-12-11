@@ -44,7 +44,7 @@ a {
   left: 0;
   z-index: 1000000;
   width: 100%;
-  transition: all 0.3s;
+  transition: background 0.3s;
 }
 
 .sticky-header {
@@ -90,10 +90,6 @@ a {
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-}
-
-.line-3 {
-  width: 16px;
 }
 
 .nav-hamburger span:first-child {
@@ -163,14 +159,11 @@ a {
   padding-left: 0;
 }
 
-.menu-item a,
-.page_item a {
+.menu-item a {
   color: white;
   text-decoration: none;
 }
-.page_item a {
-  font-size: 2rem;
-}
+
 .menu-item a {
   font-size: 1rem;
 }
@@ -184,6 +177,7 @@ a {
   color: #fff;
   text-decoration: none;
   mix-blend-mode: difference;
+  white-space: nowrap;
 }
 .nav-link {
   transition: 0.3s ease-in-out;
@@ -226,6 +220,7 @@ a {
   color: white;
   line-height: 0.8;
 }
+
 .heading-hero span {
   padding: 12px 24px;
   background: var(--c-main);
@@ -248,6 +243,7 @@ a {
   font-size: 16px;
   position: relative;
 }
+
 .btn::before {
   transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   content: '';
@@ -300,21 +296,23 @@ a {
   width: 80%;
 }
 
-.swiper-slide {
+#about .swiper-slide {
   padding: 60px 0;
   background: var(--c-dark);
   height: auto !important;
 }
 
-.swiper-horizontal
+#about
+  .swiper-horizontal
   > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+#about
+  .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 0 !important;
   transform: unset !important;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+#about .swiper-button-next,
+#about .swiper-button-prev {
   color: var(--c-dark) !important;
   background-color: var(--c-main);
   padding: 12px 22px;
@@ -323,17 +321,18 @@ a {
   bottom: 0 !important;
 }
 
-.swiper-button-next {
+#about .swiper-button-next {
   right: 0 !important;
   left: unset !important;
 }
 
-.swiper-button-prev {
+#about .swiper-button-prev {
   right: 60px !important;
   left: unset !important;
 }
-.swiper-button-next::after,
-.swiper-button-prev::after {
+
+#about .swiper-button-next::after,
+#about .swiper-button-prev::after {
   font-size: 16px !important;
 }
 
@@ -343,7 +342,6 @@ a {
 
 .features-card {
   padding: 40px;
-  color: white;
   background: var(--c-main);
 }
 
@@ -408,6 +406,7 @@ section {
 #wrapper canvas {
   width: 100%;
   height: 100%;
+  opacity: 0.1;
   z-index: -1;
 }
 

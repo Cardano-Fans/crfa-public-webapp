@@ -26,7 +26,6 @@ export const AboutPool: React.FC = () => {
 
             <div className="w-10/12 z-20 ">
               <NextImage
-                className="aos-init"
                 height={213}
                 width={373}
                 src="/stakepool-epoch.png"

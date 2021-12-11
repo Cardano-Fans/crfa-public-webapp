@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Slide } from './Slide'
-import { copyToClipboard } from '../../utils/copyToClipboard'
+import { copyToClipboard } from '../../../utils/copyToClipboard'
 
 const POOL_ID = '6C518B4861BB88B1395CEB116342CECBCFB8736282655F9A61C4C368'
 
