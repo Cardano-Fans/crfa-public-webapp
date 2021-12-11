@@ -3,42 +3,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 export function customScript() {
-  // Copy pool ID
-  document.addEventListener('DOMContentLoaded', function () {
-    const copyButton = document.getElementById('copyId')
-    const codeEle = document.getElementById('poolId')
-
-    copyButton.addEventListener('click', function () {
-      const selection = window.getSelection()
-
-      // Save the current selection
-      const currentRange =
-        selection.rangeCount === 0 ? null : selection.getRangeAt(0)
-
-      // Select the text content of code element
-      const range = document.createRange()
-      range.selectNodeContents(codeEle)
-      selection.removeAllRanges()
-      selection.addRange(range)
-
-      // Copy to the clipboard
-      try {
-        document.execCommand('copy')
-      } catch (err) {
-        // Unable to copy
-        copyButton.innerHTML = 'Copied'
-      } finally {
-        // Restore the previous selection
-        copyButton.innerHTML = 'Copied'
-        alert(
-          'Pool ID: 6C518B4861BB88B1395CEB116342CECBCFB8736282655F9A61C4C368, copied to clipboard'
-        )
-        selection.removeAllRanges()
-        currentRange && selection.addRange(currentRange)
-      }
-    })
-  })
-
   //////////////////
   // Animations Init
 

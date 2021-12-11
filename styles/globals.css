@@ -208,12 +208,6 @@ a {
     rgba(0, 8, 45, 1) 90%
   );
 }
-.hero-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .about,
 .features,
@@ -347,23 +341,12 @@ a {
   background: var(--c-main);
 }
 
-.slide-card {
-  color: white;
-  background: rgba(255, 255, 255, 0.04);
-  align-self: stretch;
-  height: 100%;
-}
-
-.slide-card-title {
-  font-size: 2rem;
-  line-height: 1;
-}
-
 .features-card {
   padding: 40px;
   color: white;
   background: var(--c-main);
 }
+
 .features-card h3 {
   font-size: 2rem;
 }
@@ -373,10 +356,6 @@ a {
 }
 .features-card-content {
   color: #00082d;
-}
-
-.contact-card {
-  background: rgba(255, 255, 255, 0.05);
 }
 
 .bg-red {
@@ -491,9 +470,6 @@ section {
     font-size: 2.2rem;
   }
   .features-card-title {
-    font-size: 1.8rem !important;
-  }
-  .slide-card-title {
     font-size: 1.8rem !important;
   }
 

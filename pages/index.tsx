@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import cx from 'classnames'
 
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
       <Header />
 
       <main>
-        <section className="hero">
+        <section className="hero flex items-center">
           <div id="wrapper">
             <canvas
               id="canvas"
@@ -40,7 +41,7 @@ const Home: NextPage = () => {
               height={939}
             />
           </div>
-          <div className="container mx-auto hero-container relative">
+          <div className="container mx-auto relative">
             <div className="flex flex-col-reverse lg:flex-row mx-auto">
               <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2">
                 <h1
@@ -173,25 +174,28 @@ const Home: NextPage = () => {
                 />
               </div>
               <div className="w-full lg:w-1/2">
-                <a href="/cardano-blockchain-insight/">
-                  <img
-                    className="w-100 rounded-md aos-init"
-                    src="/ada-fans-cardano.png"
-                    alt="zoom in"
-                    data-aos="zoom-in"
-                  />
-                </a>
+                <Link passHref href="/cardano-blockchain-insight/">
+                  <a>
+                    <img
+                      className="w-100 rounded-md aos-init"
+                      src="/ada-fans-cardano.png"
+                      alt="zoom in"
+                      data-aos="zoom-in"
+                    />
+                  </a>
+                </Link>
               </div>
             </div>
-            <a
-              href="/cardano-blockchain-insight/"
-              className="btn rounded mt-10 aos-init"
-              data-aos="fade-up"
-              data-aos-anchor-placement="top"
-              data-aos-delay={350}
-            >
-              <span className="btn-text-blended">Get more details</span>
-            </a>
+            <Link passHref href="/cardano-blockchain-insight/">
+              <a
+                className="btn rounded mt-10 aos-init"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top"
+                data-aos-delay={350}
+              >
+                <span className="btn-text-blended">Get more details</span>
+              </a>
+            </Link>
           </div>
         </section>
         <section id="cardano" className="features py-36 mx-auto">
