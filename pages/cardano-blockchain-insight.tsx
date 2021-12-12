@@ -19,7 +19,7 @@ const BlockchainInsight: NextPage = () => {
 
       <section className="default-page container mx-auto relative overflow-hidden pt-60 pl-6 sm:pl-0 pr-6 sm:pr-0">
         <h1 className="heading-hero c-white mb-16" data-aos="fade-down">
-          Cardano Blockchain Insight
+          Cardano Blockchain Insights
         </h1>
         <a
           href="https://datastudio.google.com/u/0/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/k5r9B"
