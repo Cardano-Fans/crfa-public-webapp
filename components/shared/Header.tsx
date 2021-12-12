@@ -50,11 +50,6 @@ export const Header: React.FC = () => {
               </Link>
             </li>
             <li className="nav-link">
-              <Link href="/#promotion" passHref>
-                <a>Promotion</a>
-              </Link>
-            </li>
-            <li className="nav-link">
               <Link href="/#cardano" passHref>
                 <a>Cardano</a>
               </Link>
