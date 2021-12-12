@@ -26,3 +26,12 @@ docker build . -t crfa-public-webapp
 ```
 docker run -p 3000:3000 crfa-public-webapp
 ```
+
+# Docker save and restore image
+```
+docker save -o crfa-public-webapp-latest.tar crfa-public-webapp:latest
+```
+transfer to webserver and restore:
+```
+docker load -i crfa-public-webapp-latest.tar
+```
