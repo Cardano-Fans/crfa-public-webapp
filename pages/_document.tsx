@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-title-in-document-head */
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
-class MyDocument extends Document {
+// @ts-ignore
+class Document extends NextDocument {
   render() {
     return (
       <Html>
@@ -48,4 +49,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument
+export default Document
