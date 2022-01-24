@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Cardano Fans - CRFA: Cardano Fans Stacking Pool</title>
+        <title>Cardano Fans - CRFA: Cardano Fans Staking Pool</title>
       </Head>
 
       <Header />
