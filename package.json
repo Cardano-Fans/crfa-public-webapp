@@ -8,27 +8,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emurgo/cardano-serialization-lib-browser": "^9.1.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "@headlessui/react": "^1.4.3",
+    "@xstate/react": "^1.6.3",
     "aos": "^3.0.0-beta.6",
+    "buffer": "^6.0.3",
     "classnames": "^2.3.1",
     "dayjs": "^1.10.7",
     "next": "12.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "swiper": "^7.3.0"
+    "react-hot-toast": "^2.2.0",
+    "swiper": "^7.3.0",
+    "xstate": "^4.27.0"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
     "@types/node": "16.11.7",
     "@types/react": "17.0.34",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.2",
     "eslint": "7",
     "eslint-config-next": "12.0.3",
-    "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.19",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.17",
     "typescript": "4.4.4"
   }
 }

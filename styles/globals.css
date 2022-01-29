@@ -42,7 +42,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000000;
+  z-index: 3;
   width: 100%;
   transition: background 0.3s;
 }
@@ -387,7 +387,7 @@ a {
 }
 
 section {
-  z-index: 1000;
+  z-index: 2;
   position: relative;
 }
 
