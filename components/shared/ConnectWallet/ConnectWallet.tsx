@@ -48,8 +48,6 @@ async function delegate(walletKey: string) {
     const response: Boolean | undefined | null =
       await CardanoAPI?.baseCommands.enable()
 
-    console.log('response', response)
-
     if (response) {
       //@ts-ignore
       const stake = await CardanoAPI?.plugins.spend.delegate({

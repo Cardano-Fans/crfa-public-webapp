@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Modal } from '../Modal'
 
 type Wallet = {
@@ -20,8 +20,6 @@ export const SelectWallet: React.FC<Props> = ({
   wallets,
   onSelectWallet,
 }) => {
-  // const [selectedWallet, setSelectedWallet] = useState(null)
-
   return (
     <Modal title="Select Wallet" isOpen={isOpen} onClose={onClose}>
       <div className="space-y-3">

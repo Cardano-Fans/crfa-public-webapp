@@ -21,7 +21,6 @@ export const Commands = {
       const wallet = CardanoAPIObject.wallet
       CardanoAPIObject.extendedApi = await wallet.enable()
 
-      console.log('extendedApi', CardanoAPIObject.extendedApi)
       return CardanoAPIObject.extendedApi
     } catch (e) {
       console.error(e)
@@ -69,7 +68,6 @@ export const Commands = {
   getRewardAddress: async (type?: string): Promise<string> => {
     //@ts-ignore
     const addr = await CardanoAPIObject.extendedApi.getRewardAddresses()
-    console.log('getRewardAddress', addr)
     if (type === CardanoAPIObject.addressReturnType.hex) {
       return addr[0]
     }
