@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { SelectWallet } from './SelectWallet'
 import { CardanoAPI, Blockfrost, Spend } from '../../../lib/cardano-api'
 import toast from 'react-hot-toast'
@@ -60,12 +60,12 @@ async function delegate(walletKey: string) {
       })
 
       if (stake) {
-        toast.success('Successfully delegated to our stakepool! Thank you.')
+        toast.success('Successfully delegated to our CRFA stake pool! Thank You!')
       }
     }
   } catch (e) {
-    toast.error("This didn't work.")
-    console.log('failed', e)
+    toast.error("Error occurred while delegating or a user cancelled delegation process.")
+    console.log('failed while delegating', e)
   }
 }
 
@@ -84,7 +84,7 @@ export const ConnectWallet = (props) => {
     } else if (wallets.length === 1) {
       delegate(wallets[0].walletKey)
     } else {
-      toast.error('No wallets found.')
+      toast.error('No wallets found!')
     }
   }
 
