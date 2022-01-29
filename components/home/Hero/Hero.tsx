@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { renderCanvas } from './canvas'
 
+import { ConnectWallet } from '../../shared/ConnectWallet/ConnectWallet'
+
 export const Hero: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
@@ -26,7 +28,13 @@ export const Hero: React.FC = () => {
               <br />
               Staking Pool
             </h1>
-            <a
+            <ConnectWallet
+              data-aos="fade-up"
+              data-aos-anchor-placement="top"
+              data-aos-delay={350}
+            />
+
+            {/* <a
               href="#about"
               className="btn rounded"
               data-aos="fade-up"
@@ -34,7 +42,7 @@ export const Hero: React.FC = () => {
               data-aos-delay={350}
             >
               <span className="btn-text-blended">View more</span>
-            </a>
+            </a> */}
           </div>
           <div className="flex items-center justify-center lg:justify-end w-full lg:w-1/2 mb-10 lg:mb-0">
             <img

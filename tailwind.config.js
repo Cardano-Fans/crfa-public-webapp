@@ -1,6 +1,8 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   corePlugins: {
     container: false,
   },
@@ -16,9 +18,7 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
+
   plugins: [
     ({ addComponents, theme }) => {
       addComponents({
