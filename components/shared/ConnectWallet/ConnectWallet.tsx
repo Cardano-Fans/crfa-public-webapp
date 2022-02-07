@@ -17,6 +17,7 @@ function getUserWallets(): Wallet[] {
     // { name: 'yoroi', logo: 'yoroi', walletKey: 'yoroi' },
     // { name: 'gerowallet', logo: 'gerowallet', walletKey: 'gerowallet' },
     // { name: 'typhonwallet', logo: 'typhonwallet', walletKey: 'typhon' },
+    { name: 'flint', logo: 'flint', walletKey: 'flint' },
     { name: 'nami', logo: 'nami', walletKey: 'nami' },
   ]
 
@@ -60,11 +61,15 @@ async function delegate(walletKey: string) {
       })
 
       if (stake) {
-        toast.success('Successfully delegated to our CRFA stake pool! Thank You!')
+        toast.success(
+          'Successfully delegated to our CRFA stake pool! Thank You!'
+        )
       }
     }
   } catch (e) {
-    toast.error("Error occurred while delegating or a user cancelled delegation process.")
+    toast.error(
+      'Error occurred while delegating or a user cancelled delegation process.'
+    )
     console.log('failed while delegating', e)
   }
 }
