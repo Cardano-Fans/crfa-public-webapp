@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "@lib/*": ["lib/*"],
+      "@components/*": ["components/*"],
+      "@features/*": ["features/*"]
+    },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,6 +21,11 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "features/wallet/wallet.machine.js"
+  ],
   "exclude": ["node_modules"]
 }

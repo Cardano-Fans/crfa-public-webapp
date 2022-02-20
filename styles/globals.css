@@ -296,6 +296,20 @@ a {
   width: 80%;
 }
 
+.btn-secondary {
+  color: white;
+
+  padding: 9px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  border: 2px solid rgb(77, 82, 108);
+  transition: 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  border-color: rgb(118, 122, 140);
+}
+
 #about .swiper-slide {
   padding: 60px 0;
   background: var(--c-dark);

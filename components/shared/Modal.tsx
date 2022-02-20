@@ -1,5 +1,12 @@
 import React, { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+import {
+  faWindowClose,
+  faStopCircle,
+  faPlus,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 type Props = {
   isOpen: boolean
   onClose: any
@@ -44,13 +51,23 @@ export function Modal({ isOpen, onClose, children, title }: Props) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+              <div className="relative inline-block w-full max-w-md p-8 my-8 overflow-hidden text-left align-middle transition-all transform bg-slate-900 text-slate-200 shadow-xl rounded-2xl">
                 <Dialog.Title
                   as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900 mb-2"
+                  className="text-xl font-semibold leading-6 mb-6 tracking-wider"
                 >
                   {title}
                 </Dialog.Title>
+                <button
+                  className="p-2 absolute top-2 right-2"
+                  onClick={onClose}
+                >
+                  <FontAwesomeIcon
+                    icon={faPlus}
+                    className="text-white rotate-45"
+                    size="lg"
+                  />
+                </button>
                 {children}
               </div>
             </Transition.Child>
