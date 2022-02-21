@@ -210,6 +210,13 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
 
+"@tailwindcss/forms@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.4.0.tgz#a46715e347a32d216a3973eb67473bd29ae3798e"
+  integrity sha512-DeaQBx6EgEeuZPQACvC+mKneJsD8am1uiJugjgQK1+/Vt+Ai0GpFBC2T2fqnUad71WgOxyrZPE6BG1VaI6YqfQ==
+  dependencies:
+    mini-svg-data-uri "^1.2.3"
+
 "@types/aos@^3.0.4":
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/@types/aos/-/aos-3.0.4.tgz#fd0dce430f18d118081aaced2c79c30617b15818"
@@ -234,6 +241,11 @@
   version "15.7.4"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
+
+"@types/pubsub-js@^1.8.3":
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/@types/pubsub-js/-/pubsub-js-1.8.3.tgz#f480a9e4f72f50e1e3cc598ef1b32f3bfbbcd6b6"
+  integrity sha512-6BqY04dh2UV1dNV690tyJVJYQ0U6qBH4tU+FCwY1Mhl8jOPOP9qiIvgLnB59cVik/E6/R002oXZpGiDm+2C8eA==
 
 "@types/react@17.0.34":
   version "17.0.34"
@@ -548,6 +560,11 @@ caniuse-lite@^1.0.30001286, caniuse-lite@^1.0.30001297:
   version "1.0.30001302"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001302.tgz#da57ce61c51177ef3661eeed7faef392d3790aaa"
   integrity sha512-YYTMO+tfwvgUN+1ZnRViE53Ma1S/oETg+J2lISsqi/ZTNThj3ZYBOKP2rHwJc37oCsPqAzJ3w2puZHn0xlLPPw==
+
+cbor-web@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/cbor-web/-/cbor-web-8.1.0.tgz#c1148e91ca6bfc0f5c07c1df164854596e2e33d6"
+  integrity sha512-2hWHHMVrfffgoEmsAUh8vCxHoLa1vgodtC73+C5cSarkJlwTapnqAzcHINlP6Ej0DXuP4OmmJ9LF+JaNM5Lj/g==
 
 chalk@^2.0.0:
   version "2.4.2"
@@ -1454,6 +1471,11 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
+jotai@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/jotai/-/jotai-1.5.3.tgz#0157f962c6cd7d28389f9606a1eefebf223801ed"
+  integrity sha512-iD8MkbehxTjfRUtIJJdyQcjbAe2MqjW1+oFc5lvfgRjLHwjRQyWnZC3gdGAOQCOqUSPZHOBGgWyP/8gBDckaNQ==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -1586,6 +1608,11 @@ micromatch@^4.0.4:
   dependencies:
     braces "^3.0.1"
     picomatch "^2.2.3"
+
+mini-svg-data-uri@^1.2.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.3.tgz#43177b2e93766ba338931a3e2a84a3dfd3a222b8"
+  integrity sha512-gSfqpMRC8IxghvMcxzzmMnWpXAChSA+vy4cia33RgerMS8Fex95akUyQZPbxJJmeBGiGmK7n/1OpUX8ksRjIdA==
 
 minimatch@^3.0.4:
   version "3.0.4"
@@ -1895,6 +1922,11 @@ prop-types@^15.7.2:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
     react-is "^16.8.1"
+
+pubsub-js@^1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/pubsub-js/-/pubsub-js-1.9.4.tgz#5c8678600e34e95b1269e96c17e1b51dab3ecb5a"
+  integrity sha512-hJYpaDvPH4w8ZX/0Fdf9ma1AwRgU353GfbaVfPjfJQf1KxZ2iHaHl3fAUw1qlJIR5dr4F3RzjGaWohYUEyoh7A==
 
 punycode@^2.1.0:
   version "2.1.1"

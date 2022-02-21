@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { renderCanvas } from './canvas'
 
-import { ConnectWallet } from '../../shared/ConnectWallet/ConnectWallet'
+import { DelegateButton } from '@features/wallet'
 
 export const Hero: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
               <br />
               Staking Pool
             </h1>
-            <ConnectWallet
+            <DelegateButton
               data-aos="fade-up"
               data-aos-anchor-placement="top"
               data-aos-delay={350}
