@@ -45,7 +45,7 @@ export const SelectWalletModal: React.FC = () => {
         {allowedWallets.map((wallet) => (
           <button
             key={wallet.name}
-            className="p-3 bg-slate-800/90 hover:bg-slate-800 rounded-lg"
+            className="p-3 bg-slate-800/80 hover:bg-slate-800 rounded-lg transition-all"
             onClick={() => {
               connectWallet(wallet.walletKey)
               setIsOpen(false)
