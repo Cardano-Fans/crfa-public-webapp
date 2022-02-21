@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
                 href="mailto:fanscardano@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white px-6 py-3 rounded-full text-dark"
+                className="btn-secondary"
               >
                 Send us message
               </a>
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
       </div>
       <div className="copy-box container mx-auto mt-20">
         <div className="copy-text c-white text-sm flex justify-center">
-          Copyright © 2021
+          Copyright © 2022
         </div>
       </div>
     </footer>

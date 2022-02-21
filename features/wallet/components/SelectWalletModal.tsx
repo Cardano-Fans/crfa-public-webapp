@@ -45,7 +45,7 @@ export const SelectWalletModal: React.FC = () => {
         {allowedWallets.map((wallet) => (
           <button
             key={wallet.name}
-            className="p-3 bg-slate-800/90 hover:bg-slate-800 rounded-lg "
+            className="p-3 bg-slate-800/90 hover:bg-slate-800 rounded-lg"
             onClick={() => {
               connectWallet(wallet.walletKey)
               setIsOpen(false)
@@ -59,7 +59,7 @@ export const SelectWalletModal: React.FC = () => {
               alt=""
             />
 
-            <div className="text-slate-300 text-lg">{wallet.name}</div>
+            <div className="text-slate-100 text-lg">{wallet.name}</div>
           </button>
         ))}
       </div>

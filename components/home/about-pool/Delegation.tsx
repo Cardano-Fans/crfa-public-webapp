@@ -1,23 +1,22 @@
-import { useState } from 'react'
+import toast from 'react-hot-toast'
 import { Slide } from './Slide'
 import { copyToClipboard } from '../../../utils/copyToClipboard'
 import { DelegateButton } from '@features/wallet'
 const POOL_ID = '6c518b4861bb88b1395ceb116342cecbcfb8736282655f9a61c4c368'
 
 export const Delegation: React.FC = () => {
-  const [isCopied, setIsCopied] = useState(false)
   const onCopyClick = () => {
-    copyToClipboard(POOL_ID).then(() => setIsCopied(true))
+    toast.success('Copied to clipboard!')
+    copyToClipboard(POOL_ID)
   }
 
   return (
     <Slide title="Delegation">
       <p>
-        OUR POOL ID: <span id="poolId">{POOL_ID}</span>
+        <span className="font-semibold tracking-wide">OUR POOL ID:</span>{' '}
+        <span id="poolId">{POOL_ID}</span>
         <br />
-        TICKER: CRFA
-        <br />
-        DELEGATE with any Cardano compatible wallet
+        <span className="font-semibold tracking-wide">TICKER:</span> CRFA
       </p>
 
       <div className="mt-6 flex flex-wrap items-center justify-center sm:justify-start">
@@ -27,7 +26,7 @@ export const Delegation: React.FC = () => {
           className="btn-secondary w-full sm:w-auto"
           onClick={onCopyClick}
         >
-          {isCopied ? 'Copied' : 'Copy pool ID'}
+          Copy Pool ID
         </button>
       </div>
     </Slide>

@@ -54,7 +54,7 @@ export function Modal({ isOpen, onClose, children, title }: Props) {
               <div className="relative inline-block w-full max-w-md p-8 my-8 overflow-hidden text-left align-middle transition-all transform bg-slate-900 text-slate-200 shadow-xl rounded-2xl">
                 <Dialog.Title
                   as="h3"
-                  className="text-xl font-semibold leading-6 mb-6 tracking-wider"
+                  className="text-xl font-medium leading-6 mb-6 tracking-wider"
                 >
                   {title}
                 </Dialog.Title>

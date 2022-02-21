@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useAtom } from 'jotai'
 import { walletAtom, walletStatusAtom, selectWalletModalAtom } from './atoms'
 import PubSub from 'pubsub-js'
+// @ts-ignore
 import * as cbor from 'cbor-web'
 import { CardanoAPI, Blockfrost, Spend } from '@lib/cardano-api'
 import toast from 'react-hot-toast'
@@ -110,11 +111,11 @@ export function useWallet() {
       selectWallet()
 
       const token = PubSub.subscribe('wallet.connected', () => {
-        mockDelegate()
+        executeDelegation()
         PubSub.unsubscribe(token)
       })
     } else {
-      mockDelegate()
+      executeDelegation()
     }
   }
 
