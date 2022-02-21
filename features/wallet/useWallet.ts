@@ -55,6 +55,11 @@ export function useWallet() {
         )
         const decodedBalance = await decodeBalance(String(balance))
 
+        console.log('DEBUG BALANCE', {
+          balance,
+          decodedBalance,
+        })
+
         setWallet({
           walletKey,
           balance: decodedBalance,
