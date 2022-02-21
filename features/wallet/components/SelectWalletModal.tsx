@@ -2,28 +2,9 @@ import React from 'react'
 import NextImage from 'next/image'
 import { useAtom } from 'jotai'
 import { Modal } from '@components/shared/Modal'
+import { config } from '@shared/config'
 import { selectWalletModalAtom } from '../atoms'
 import { useWallet } from '../useWallet'
-
-type Wallet = {
-  name: string
-  logo: string
-  walletKey: string
-}
-
-const allowedWallets = [
-  {
-    name: 'CCvault',
-    logo: '/wallet-logos/ccvault.png',
-    walletKey: 'ccvault',
-  },
-  { name: 'Flint', logo: '/wallet-logos/flint.svg', walletKey: 'flint' },
-  { name: 'Nami', logo: '/wallet-logos/nami.svg', walletKey: 'nami' },
-  //  doesn't work, not fully implements CIP-030
-  // { name: 'yoroi', logo: 'yoroi', walletKey: 'yoroi' },
-  // { name: 'gerowallet', logo: 'gerowallet', walletKey: 'gerowallet' },
-  // { name: 'typhonwallet', logo: 'typhonwallet', walletKey: 'typhon' },
-]
 
 export const SelectWalletModal: React.FC = () => {
   const [isOpen, setIsOpen] = useAtom(selectWalletModalAtom)
@@ -42,7 +23,7 @@ export const SelectWalletModal: React.FC = () => {
       }}
     >
       <div className="grid grid-cols-2 gap-6">
-        {allowedWallets.map((wallet) => (
+        {Object.values(config.wallets).map((wallet) => (
           <button
             key={wallet.name}
             className="p-3 bg-slate-800/80 hover:bg-slate-800 rounded-lg transition-all"

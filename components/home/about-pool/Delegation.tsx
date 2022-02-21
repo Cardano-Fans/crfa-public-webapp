@@ -12,12 +12,18 @@ export const Delegation: React.FC = () => {
 
   return (
     <Slide title="Delegation">
-      <p>
-        <span className="font-semibold tracking-wide">OUR POOL ID:</span>{' '}
-        <span id="poolId">{POOL_ID}</span>
-        <br />
+      <div>
+        <div className="flex items-center">
+          <span className="font-semibold tracking-wide">OUR POOL ID:</span>{' '}
+          <input
+            onFocus={(event) => event.target.select()}
+            className="text-slate-200  appearance-none flex-1 p-1 ml-3 bg-slate-800 border border-slate-700 rounded-md focus:border-slate-600 focus:outline-none"
+            readOnly
+            defaultValue={POOL_ID}
+          />
+        </div>
         <span className="font-semibold tracking-wide">TICKER:</span> CRFA
-      </p>
+      </div>
 
       <div className="mt-6 flex flex-wrap items-center justify-center sm:justify-start">
         <DelegateButton className="mb-3 w-full sm:mb-0 sm:mr-3 sm:w-auto " />

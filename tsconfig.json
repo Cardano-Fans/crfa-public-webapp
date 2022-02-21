@@ -5,7 +5,8 @@
     "paths": {
       "@lib/*": ["lib/*"],
       "@components/*": ["components/*"],
-      "@features/*": ["features/*"]
+      "@features/*": ["features/*"],
+      "@shared/*": ["shared/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

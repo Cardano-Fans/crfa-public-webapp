@@ -21,6 +21,7 @@ module.exports = {
   },
 
   plugins: [
+    require('@tailwindcss/forms'),
     ({ addComponents, theme }) => {
       addComponents({
         '.container': {

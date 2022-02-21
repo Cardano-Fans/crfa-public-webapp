@@ -78,9 +78,6 @@ export function useWallet() {
   }
 
   async function delegate() {
-    const mockDelegate = () => {
-      console.log('mockDelegate')
-    }
     const executeDelegation = async () => {
       try {
         //@ts-ignore

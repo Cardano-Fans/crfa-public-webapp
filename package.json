@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@headlessui/react": "^1.4.3",
+    "@tailwindcss/forms": "^0.4.0",
     "@xstate/react": "^1.6.3",
     "aos": "^3.0.0-beta.6",
     "buffer": "^6.0.3",

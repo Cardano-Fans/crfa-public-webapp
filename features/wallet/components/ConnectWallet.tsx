@@ -1,7 +1,9 @@
 import { Fragment } from 'react'
+import NextImage from 'next/image'
 import { faWallet, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Popover, Transition } from '@headlessui/react'
+import { config } from '@shared/config'
 import { useWallet } from '../useWallet'
 
 function shortenAddress(address: string = '') {
@@ -25,9 +27,23 @@ export const ConnectWallet = (props) => {
               <div className="flex items-center z-10 p-3 bg-slate-900 text-primary rounded-full border-2 border-primary">
                 <FontAwesomeIcon icon={faWallet} />
               </div>
-              <div className="bg-slate-200/20 hover:bg-slate-200/25 transition-all  text-slate-200 pl-4 pr-3 rounded-l-none rounded-3xl  py-1 -ml-2 flex items-center tracking-wider">
+              <div
+                className="bg-slate-200/20 hover:bg-slate-200/25 transition-all  text-slate-200 pl-4 pr-3 rounded-l-none rounded-3xl  py-1 -ml-2 flex items-center tracking-wider"
+                title={wallet.address}
+              >
                 {shortenAddress(wallet.address)}
 
+                <div className="ml-2 flex items-center bg-white/90 rounded-full p-[2px]">
+                  <NextImage
+                    objectFit="contain"
+                    className=""
+                    height={22}
+                    width={22}
+                    //@ts-ignore
+                    src={config.wallets[wallet.walletKey].logo}
+                    alt=""
+                  />
+                </div>
                 <FontAwesomeIcon
                   icon={faChevronDown}
                   className="ml-3"
@@ -51,7 +67,21 @@ export const ConnectWallet = (props) => {
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-slate-900 text-slate-200 p-7 border border-slate-800">
                   <div className="flex justify-between mb-3">
                     <div className="font-medium">Connected to:</div>
-                    <div>{wallet.walletKey}</div>
+                    <div className="flex items-center">
+                      <div className="mr-2 flex items-center bg-white/90 rounded-full p-[2px]">
+                        <NextImage
+                          objectFit="contain"
+                          className=""
+                          height={22}
+                          width={22}
+                          //@ts-ignore
+                          src={config.wallets[wallet.walletKey].logo}
+                          alt=""
+                        />
+                      </div>
+                      {/*@ts-ignore*/}
+                      {config.wallets[wallet.walletKey].name}
+                    </div>
                   </div>
                   <div className="flex justify-between">
                     <div className="font-medium">Balance:</div>

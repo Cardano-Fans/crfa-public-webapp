@@ -42,12 +42,12 @@ export const BlockchainInsights: React.FC = () => {
         </div>
         <Link passHref href="/cardano-blockchain-insight/">
           <a
-            className="btn rounded mt-10"
+            className="btn-secondary mt-10"
             data-aos="fade-up"
             data-aos-anchor-placement="top"
             data-aos-delay={350}
           >
-            <span className="btn-text-blended">Get more details</span>
+            Get more details
           </a>
         </Link>
       </div>
