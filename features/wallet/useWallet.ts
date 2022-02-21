@@ -138,5 +138,10 @@ async function decodeBalance(cborValue: string) {
 
   const decodedBalance = await cbor.decodeFirst(buffer)
 
+  // cover edge case
+  if (Array.isArray(decodedBalance)) {
+    return decodedBalance[0]
+  }
+
   return decodedBalance
 }
