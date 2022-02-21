@@ -12,7 +12,7 @@ class Document extends NextDocument {
 
           <meta name="robots" content="max-image-preview:large" />
 
-          <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+          <link rel="icon" href="/favicon.ico" sizes="32x32" />
           <link
             rel="icon"
             type="image/png"
