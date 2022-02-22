@@ -147,7 +147,6 @@ export function useWallet() {
         })
 
         if (result) {
-          console.log(result)
           toast.success(
             `Successfully donated ${amount} ADA to Cardano Blockchain Insights! Thank You!`
           )
