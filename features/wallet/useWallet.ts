@@ -149,7 +149,7 @@ export function useWallet() {
         if (result) {
           console.log(result)
           toast.success(
-            'Successfully donated ${amount} Adas to our CRFA stake pool! Thank You!'
+            `Successfully donated ${amount} ADA to Cardano Blockchain Insights! Thank You!`
           )
         }
       } catch (e) {
