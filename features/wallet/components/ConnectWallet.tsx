@@ -108,6 +108,13 @@ export const ConnectWallet = (props) => {
           Connect Wallet
         </button>
       )}
+
+      {status === 'connecting' && (
+        <button className="btn-secondary">
+          <FontAwesomeIcon icon={faWallet} className="mr-1 text-slate-300" />{' '}
+          Connecting...
+        </button>
+      )}
     </div>
   )
 }
