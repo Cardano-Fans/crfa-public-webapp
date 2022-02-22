@@ -35,13 +35,7 @@ export function useWallet() {
 
       await CardanoAPI.register({
         wallet: walletKey,
-        plugins: [
-          Blockfrost({
-            mainnet: 'mainnetS6e1C6yuxQNHOX8SwVNHPvomtpOdD5Iu',
-            testnet: 'testnetSSuaIDKnuNpFY8YdWlEc2ToOFXY4CJB7',
-          }),
-          Spend(),
-        ],
+        plugins: [Blockfrost(), Spend()],
         cardanoSerializationLibrary: emurgoSerializationLib,
       })
 
