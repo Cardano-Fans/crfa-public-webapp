@@ -1,6 +1,11 @@
 import { useEffect } from 'react'
 import { useAtom } from 'jotai'
-import { walletAtom, walletStatusAtom, selectWalletModalAtom } from './atoms'
+import {
+  walletAtom,
+  walletStatusAtom,
+  selectWalletModalAtom,
+  donateModalAtom,
+} from './atoms'
 import PubSub from 'pubsub-js'
 // @ts-ignore
 import * as cbor from 'cbor-web'
@@ -22,12 +27,18 @@ export function useWallet() {
   const [wallet, setWallet] = useAtom(walletAtom)
   const [walletStatus, setWalletStatus] = useAtom(walletStatusAtom)
   const [_, setSelectWalletModal] = useAtom(selectWalletModalAtom)
+  const [__, setDonateModal] = useAtom(donateModalAtom)
 
   function selectWallet() {
     setSelectWalletModal(true)
   }
 
+  function selectDonation() {
+    setDonateModal(true)
+  }
+
   async function connectWallet(walletKey: string) {
+    setWalletStatus('connecting')
     try {
       const emurgoSerializationLib = await import(
         '@emurgo/cardano-serialization-lib-browser/cardano_serialization_lib.js'
@@ -64,9 +75,11 @@ export function useWallet() {
 
         PubSub.publish('wallet.connected')
       } else {
+        setWalletStatus('disconnected')
         toast.error('Could not connect to wallet')
       }
     } catch (e) {
+      setWalletStatus('disconnected')
       toast.error('Could not connect to wallet')
       console.error(e)
     }
@@ -116,10 +129,68 @@ export function useWallet() {
     }
   }
 
+  async function donate() {
+    const executeDonation = async (amount: number) => {
+      try {
+        //@ts-ignore
+        const result = await CardanoAPI?.plugins.spend.send({
+          // testnet address
+          // address:
+          //   'addr_test1qzxj6udysrrsp6anjyhnpkn453c55hdxrlqkunjycz5uxwdx77z8dcnzmnhdacnfj2kglta8wurs6x7njzllkgl4hmssu8jhtd',
+
+          // prod
+          address:
+            'addr1q8nq8wdhrpq402qj4hyn5rxn624l0ccua8k3epl2xl3fz57zddeldn7syvs5x2uvuefk66azhr7lelrj423lxapuxkksknwfdj',
+          amount,
+          metadataLabel: '674',
+          metadata: 'CBI',
+        })
+
+        if (result) {
+          console.log(result)
+          toast.success(
+            'Successfully donated ${amount} Adas to our CRFA stake pool! Thank You!'
+          )
+        }
+      } catch (e) {
+        toast.error(
+          'Error occurred while donating or a user cancelled transaction.'
+        )
+        console.log('failed while donating', e)
+      }
+    }
+
+    if (walletStatus !== 'connected') {
+      selectWallet()
+
+      const connectionToken = PubSub.subscribe('wallet.connected', () => {
+        selectDonation()
+
+        PubSub.unsubscribe(connectionToken)
+      })
+    } else {
+      selectDonation()
+    }
+
+    const donationToken = PubSub.subscribe(
+      'donation.confirmed',
+      (msg, data) => {
+        executeDonation(data.amount)
+        PubSub.unsubscribe(donationToken)
+      }
+    )
+  }
+
+  function confirmDonation(amount: number) {
+    PubSub.publish('donation.confirmed', { amount })
+  }
+
   return {
     connectWallet,
     disconnectWallet,
     delegate,
+    donate,
+    confirmDonation,
     selectWallet,
     wallet,
     status: walletStatus,

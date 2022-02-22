@@ -28,3 +28,4 @@ const atomWithLocalStorage = (key: string, initialValue: any) => {
 export const walletAtom = atomWithLocalStorage('wallet', null)
 export const walletStatusAtom = atom('disconnected')
 export const selectWalletModalAtom = atom(false)
+export const donateModalAtom = atom(false)

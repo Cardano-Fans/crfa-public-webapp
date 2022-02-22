@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+import { DonateButton } from '@features/wallet'
+
 import { Header } from '../components/shared/Header'
 import { Footer } from '../components/shared/Footer'
 
@@ -21,17 +23,24 @@ const BlockchainInsight: NextPage = () => {
         <h1 className="heading-hero c-white mb-16" data-aos="fade-down">
           Cardano Blockchain Insights
         </h1>
-        <a
-          href="https://datastudio.google.com/u/0/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/k5r9B"
-          target="_blank"
-          className="btn-secondary"
+
+        <div
+          className="flex space-x-4"
           data-aos="fade-up"
           data-aos-anchor-placement="top"
           data-aos-delay={350}
-          rel="noreferrer"
         >
-          <span className="btn-text-blended">Go to Datastudio</span>
-        </a>
+          <a
+            href="https://datastudio.google.com/u/0/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/k5r9B"
+            target="_blank"
+            className="btn-secondary"
+            rel="noreferrer"
+          >
+            <span className="btn-text-blended">Go to Datastudio</span>
+          </a>
+
+          <DonateButton />
+        </div>
         <div className="default-page-content mt-20">
           <div className="w-full frame-box">
             <iframe
