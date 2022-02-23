@@ -143,7 +143,7 @@ export function useWallet() {
             'addr1q8nq8wdhrpq402qj4hyn5rxn624l0ccua8k3epl2xl3fz57zddeldn7syvs5x2uvuefk66azhr7lelrj423lxapuxkksknwfdj',
           amount,
           metadataLabel: '674',
-          metadata: 'CBI',
+          metadata: { msg: ['CBI'] },
         })
 
         if (result) {
