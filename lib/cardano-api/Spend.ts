@@ -55,6 +55,7 @@ export const Spend = () => {
       send: send,
       sendMultiple: sendMultiple,
       delegate: delegate,
+      getAssets: getAssets,
     },
   }
 }
@@ -530,4 +531,13 @@ const getProtocolParameter = async () => {
     slot: latestBlock.slot,
   }
   return parameters
+}
+
+const getAssets = async (address: string) => {
+  //@ts-ignore
+  const assets = await CardanoAPIObject.plugins.data.request(
+    `/accounts/${address}/addresses/assets`
+  )
+
+  return assets
 }
