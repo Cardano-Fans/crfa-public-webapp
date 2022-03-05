@@ -5,12 +5,14 @@ import {
   walletStatusAtom,
   selectWalletModalAtom,
   donateModalAtom,
+  premiumAccessAtom,
 } from './atoms'
 import PubSub from 'pubsub-js'
 // @ts-ignore
 import * as cbor from 'cbor-web'
 import { CardanoAPI, Blockfrost, Spend } from '@lib/cardano-api'
 import toast from 'react-hot-toast'
+import { config } from '@shared/config'
 
 export const useRestoreWallet = () => {
   const { connectWallet } = useWallet()
@@ -25,6 +27,7 @@ export const useRestoreWallet = () => {
 
 export function useWallet() {
   const [wallet, setWallet] = useAtom(walletAtom)
+  const [hasPremiumAccess, setPremiumAccess] = useAtom(premiumAccessAtom)
   const [walletStatus, setWalletStatus] = useAtom(walletStatusAtom)
   const [_, setSelectWalletModal] = useAtom(selectWalletModalAtom)
   const [__, setDonateModal] = useAtom(donateModalAtom)
@@ -174,6 +177,36 @@ export function useWallet() {
     )
   }
 
+  function checkPremiumAccessByToken() {
+    const executeGetAssets = async () => {
+      //@ts-ignore
+      const rewardAddress = await CardanoAPI.baseCommands.getRewardAddress(
+        CardanoAPI.addressReturnType.bech32
+      )
+
+      //@ts-ignore
+      const result = await CardanoAPI?.plugins.spend.getAssets(rewardAddress)
+
+      if (result) {
+        const hasAccess = result.some(
+          (asset: { unit: string; quantity: string }) =>
+            asset.unit === config.accessToken &&
+            Number(asset.quantity) >= config.accessTokenQuantity
+        )
+        setPremiumAccess(hasAccess)
+      }
+    }
+
+    if (walletStatus !== 'connected') {
+      const token = PubSub.subscribe('wallet.connected', () => {
+        executeGetAssets()
+        PubSub.unsubscribe(token)
+      })
+    } else {
+      executeGetAssets()
+    }
+  }
+
   function confirmDonation(amount: number) {
     PubSub.publish('donation.confirmed', { amount })
   }
@@ -183,10 +216,12 @@ export function useWallet() {
     disconnectWallet,
     delegate,
     donate,
+    checkPremiumAccessByToken,
     confirmDonation,
     selectWallet,
     wallet,
     status: walletStatus,
+    hasPremiumAccess,
   }
 }
 

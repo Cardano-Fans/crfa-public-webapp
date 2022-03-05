@@ -17,4 +17,9 @@ export const config = {
       walletKey: 'yoroi',
     },
   },
+
+  // policyId + assetName
+  accessToken:
+    '5ffd4803f2d1352196d6cf80c254712199b814d945a84393f24eeca443524641',
+  accessTokenQuantity: 1,
 }
