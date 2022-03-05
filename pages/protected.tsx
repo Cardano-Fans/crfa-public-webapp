@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           </div>
         ) : (
           <div className="text-white">
-            This is premium content, to access you should buy our token.
+            This is premium content, to access you should buy CRFA token.
           </div>
         )}
       </section>
