@@ -11,7 +11,7 @@ import { useAOS } from '../hooks/useAOS'
 const Home: NextPage = () => {
   useAOS()
 
-  const { hasPremiumAccess, checkPremiumAccessByToken } = useWallet()
+  const { checkPremiumAccessByToken, premiumAccessStatus } = useWallet()
 
   useEffect(() => {
     checkPremiumAccessByToken()
@@ -30,9 +30,14 @@ const Home: NextPage = () => {
           ADA Price Prediction
         </h1>
 
-        {hasPremiumAccess ? (
-          <PricePrediction />
-        ) : (
+        {(premiumAccessStatus === 'unknown' ||
+          premiumAccessStatus === 'checking') && (
+          <div className="text-3xl text-white">Connecting to wallet...</div>
+        )}
+
+        {premiumAccessStatus === 'granted' && <PricePrediction />}
+
+        {premiumAccessStatus === 'denied' && (
           <div className="text-white">
             This is premium content, to access you should buy CRFA token.
           </div>
