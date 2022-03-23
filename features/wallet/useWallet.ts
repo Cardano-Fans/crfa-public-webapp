@@ -5,7 +5,7 @@ import {
   walletStatusAtom,
   selectWalletModalAtom,
   donateModalAtom,
-  premiumAccessAtom,
+  premiumAccessStatusAtom,
 } from './atoms'
 import PubSub from 'pubsub-js'
 // @ts-ignore
@@ -27,7 +27,9 @@ export const useRestoreWallet = () => {
 
 export function useWallet() {
   const [wallet, setWallet] = useAtom(walletAtom)
-  const [hasPremiumAccess, setPremiumAccess] = useAtom(premiumAccessAtom)
+  const [premiumAccessStatus, setPremiumAccessStatus] = useAtom(
+    premiumAccessStatusAtom
+  )
   const [walletStatus, setWalletStatus] = useAtom(walletStatusAtom)
   const [_, setSelectWalletModal] = useAtom(selectWalletModalAtom)
   const [__, setDonateModal] = useAtom(donateModalAtom)
@@ -42,7 +44,10 @@ export function useWallet() {
 
   async function connectWallet(walletKey: string) {
     setWalletStatus('connecting')
+
     try {
+      await waitForExtension(walletKey)
+
       const emurgoSerializationLib = await import(
         '@emurgo/cardano-serialization-lib-browser/cardano_serialization_lib.js'
       )
@@ -179,6 +184,8 @@ export function useWallet() {
 
   function checkPremiumAccessByToken() {
     const executeGetAssets = async () => {
+      setPremiumAccessStatus('checking')
+
       //@ts-ignore
       const rewardAddress = await CardanoAPI.baseCommands.getRewardAddress(
         CardanoAPI.addressReturnType.bech32
@@ -193,7 +200,7 @@ export function useWallet() {
             asset.unit === config.accessToken &&
             Number(asset.quantity) >= config.accessTokenQuantity
         )
-        setPremiumAccess(hasAccess)
+        setPremiumAccessStatus(hasAccess ? 'granted' : 'denied')
       }
     }
 
@@ -221,7 +228,7 @@ export function useWallet() {
     selectWallet,
     wallet,
     status: walletStatus,
-    hasPremiumAccess,
+    premiumAccessStatus,
   }
 }
 
@@ -243,4 +250,33 @@ async function decodeBalance(cborValue: string) {
   }
 
   return decodedBalance
+}
+
+//@ts-ignore
+function waitForExtension(walletKey) {
+  let attemps = 0
+
+  //@ts-ignore
+  const isExtensionLoaded = () => window.cardano && window.cardano[walletKey]
+
+  return new Promise((resolve, reject) => {
+    if (isExtensionLoaded()) {
+      resolve(null)
+      return
+    }
+
+    const interval = setInterval(function () {
+      if (isExtensionLoaded()) {
+        clearInterval(interval)
+        resolve(null)
+      } else {
+        attemps++
+
+        if (attemps > 20) {
+          clearInterval(interval)
+          reject('Could not connect to wallet')
+        }
+      }
+    }, 200)
+  })
 }
