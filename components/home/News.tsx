@@ -26,7 +26,12 @@ export const News: React.FC = () => {
     setStatus('loading')
     mediumFetch('@cardano-fans')
       .then((res) => {
-        setPosts(res.items)
+        if (res.status === 'error') {
+          setStatus('error')
+          return
+        }
+
+        setPosts(res.items || [])
         setStatus('loaded')
       })
       .catch(() => {
