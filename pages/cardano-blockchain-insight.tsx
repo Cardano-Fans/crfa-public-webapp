@@ -31,7 +31,7 @@ const BlockchainInsight: NextPage = () => {
           data-aos-delay={350}
         >
           <a
-            href="https://datastudio.google.com/u/0/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/k5r9B"
+            href="https://datastudio.google.com/u/0/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/p_wxcw6g0irc"
             target="_blank"
             className="btn-secondary"
             rel="noreferrer"
@@ -47,7 +47,7 @@ const BlockchainInsight: NextPage = () => {
               className="rounded-md"
               width="100%"
               height="100%"
-              src="https://datastudio.google.com/embed/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/k5r9B"
+              src="https://datastudio.google.com/embed/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/p_wxcw6g0irc"
               frameBorder={0}
               style={{ border: 0 }}
               allowFullScreen
