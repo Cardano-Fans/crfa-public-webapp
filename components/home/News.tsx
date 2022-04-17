@@ -7,14 +7,11 @@ type Post = {
   link: string
   title: string
   thumbnail: string
-  pubDate: string
-  description: string
+  date: string
 }
 
-const mediumFetch = async (name: string) => {
-  const res = await fetch(
-    `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${name}`
-  )
+const mediumFetch = async () => {
+  const res = await fetch(`/api/medium-posts`)
   return await res.json()
 }
 
@@ -24,14 +21,14 @@ export const News: React.FC = () => {
 
   useEffect(() => {
     setStatus('loading')
-    mediumFetch('@cardano-fans')
+    mediumFetch()
       .then((res) => {
         if (res.status === 'error') {
           setStatus('error')
           return
         }
 
-        setPosts(res.items || [])
+        setPosts(res || [])
         setStatus('loaded')
       })
       .catch(() => {
@@ -119,7 +116,7 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
         <h3 className="text-white text-lg">{post.title}</h3>
       </a>
       <div className="text-sm text-white">
-        {dayjs(post.pubDate).format('MMM DD, YYYY')}
+        {dayjs(post.date).format('MMM DD, YYYY')}
       </div>
     </div>
   )
