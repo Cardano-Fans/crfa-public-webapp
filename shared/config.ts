@@ -1,8 +1,8 @@
 export const config = {
   wallets: {
     ccvault: {
-      name: 'CCvault',
-      logo: '/wallet-logos/ccvault.png',
+      name: 'Eternl',
+      logo: '/wallet-logos/eternl.png',
       walletKey: 'ccvault',
     },
     flint: {
@@ -15,7 +15,7 @@ export const config = {
       name: 'Yoroi',
       logo: '/wallet-logos/yoroi.png',
       walletKey: 'yoroi',
-    },
+    }
   },
 
   // policyId + assetName
