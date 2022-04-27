@@ -56,4 +56,6 @@ docker load -i crfa-public-webapp-latest.tar
 
 ## Support / Donation
 If you find this tool useful, you can donate any amount in ADA to the following Cardano address:
+```
 addr1qy05muetmauqfs992qd74scaeqzejjntaass68tyecfx247zddeldn7syvs5x2uvuefk66azhr7lelrj423lxapuxkks90meng
+```
