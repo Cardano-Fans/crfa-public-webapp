@@ -1,9 +1,9 @@
 export const config = {
   wallets: {
-    ccvault: {
+    eternl: {
       name: 'Eternl',
       logo: '/wallet-logos/eternl.png',
-      walletKey: 'ccvault',
+      walletKey: 'eternl',
     },
     flint: {
       name: 'Flint',
