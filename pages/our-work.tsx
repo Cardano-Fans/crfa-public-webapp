@@ -43,8 +43,6 @@ const OurWork: NextPage = () => {
              />
       </div>
 
-      {/* <hr /> */}
-
       <h2 className="text-slate-100 font-bold slide-card-title mb-4">Open Source:</h2>
       <div className="flex flex-wrap -mx-4">
         <WorkItem

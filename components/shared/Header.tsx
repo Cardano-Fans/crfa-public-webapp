@@ -60,6 +60,11 @@ export const Header: React.FC = () => {
                 </Link>
               </li>
               <li className="nav-link">
+                <Link href="/our-work" passHref>
+                  <a>Our Work</a>
+                </Link>
+              </li>
+              <li className="nav-link">
                 <Link href="/#cardano" passHref>
                   <a>Cardano</a>
                 </Link>
@@ -67,11 +72,6 @@ export const Header: React.FC = () => {
               <li className="nav-link">
                 <Link href="/cardano-blockchain-insight" passHref>
                   <a>Blockchain Insights</a>
-                </Link>
-              </li>
-              <li className="nav-link">
-                <Link href="/our-work" passHref>
-                  <a>Our Work</a>
                 </Link>
               </li>
               <li className="nav-link">
