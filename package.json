@@ -27,7 +27,7 @@
     "jotai": "^1.5.3",
     "meed": "^1.0.1",
     "next": "12.1.0",
-    "node-fetch": "^3.2.3",
+    "node-fetch": "^3.2.10",
     "pubsub-js": "^1.9.4",
     "react": "17.0.2",
     "react-chartjs-2": "^4.0.1",
