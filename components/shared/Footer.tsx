@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
       </div>
       <div className="copy-box container mx-auto mt-20">
         <div className="copy-text c-white text-sm flex justify-center">
-          Copyright © 2022
+          Copyright © 2023
         </div>
       </div>
     </footer>

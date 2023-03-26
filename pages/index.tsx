@@ -29,8 +29,6 @@ const Home: NextPage = () => {
 
         <News />
 
-        <BlockchainInsights />
-
         <AboutCardano />
       </main>
 

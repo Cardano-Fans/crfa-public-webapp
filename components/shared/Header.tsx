@@ -70,6 +70,11 @@ export const Header: React.FC = () => {
                 </Link>
               </li>
               <li className="nav-link">
+                <Link href="/our-work" passHref>
+                  <a>Our Work</a>
+                </Link>
+              </li>
+              <li className="nav-link">
                 <Link href="/#news" passHref>
                   <a>News</a>
                 </Link>
@@ -125,12 +130,17 @@ export const Header: React.FC = () => {
                         </a>
                       </li>
                       <li className="menu-item">
+                        <a href="https://cardano.fans/our-work/">
+                          Our Work
+                        </a>
+                      </li>
+                      <li className="menu-item">
                         <Link href="/#news" passHref>
                           <a>News</a>
                         </Link>
                       </li>
                       <li className="menu-item">
-                        <a href="https://cardano-fans.medium.com/">Blog</a>
+                        <a href="https://cardano-fans.medium.com">Blog</a>
                       </li>
                       <li className="menu-item">
                         <Link href="/#contact" passHref>
