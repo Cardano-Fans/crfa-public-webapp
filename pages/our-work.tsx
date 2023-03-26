@@ -41,14 +41,6 @@ const OurWork: NextPage = () => {
             link='/cardano-blockchain-insight'
             link_text='Cardano Blockchain Insights'
              />
-
-        <WorkItem 
-            title='CRFA Freeloaderz Submit Service'
-            description='Dedicated one of our cardano nodes to take part in transactions load balancing in Europe.'
-            img_uri='/FreeLoaderz.png'
-            link='https://freeloaderz.io'
-            link_text='FreeLoaderz.io'
-             />
       </div>
 
       {/* <hr /> */}
