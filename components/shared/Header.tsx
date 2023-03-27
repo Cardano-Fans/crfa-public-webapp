@@ -64,17 +64,13 @@ export const Header: React.FC = () => {
                   <a>Showcase</a>
                 </Link>
               </li>
+
               <li className="nav-link">
                 <Link href="/pool-stats" passHref>
                   <a>Pool Stats</a>
                 </Link>
               </li>
 
-              <li className="nav-link">
-                <Link href="/#cardano" passHref>
-                  <a>Cardano</a>
-                </Link>
-              </li>
               <li className="nav-link">
                 <Link href="/cardano-blockchain-insight" passHref>
                   <a>Blockchain Insights</a>
@@ -125,21 +121,25 @@ export const Header: React.FC = () => {
                           <a>Our Pool</a>
                         </Link>
                       </li>
+
                       <li className="menu-item">
-                        <Link href="/#cardano" passHref>
-                          <a>Cardano</a>
+                        <a href="https://cardano.fans/our-work/">
+                          Showcase
+                        </a>
+                      </li>
+
+                      <li className="menu-item">
+                        <Link href="/pool-stats" passHref>
+                          <a>Pool Stats</a>
                         </Link>
                       </li>
+
                       <li className="menu-item">
                         <a href="https://cardano.fans/cardano-blockchain-insight/">
                           Cardano Blockchain Insights
                         </a>
                       </li>
-                      <li className="menu-item">
-                        <a href="https://cardano.fans/our-work/">
-                          Our Work
-                        </a>
-                      </li>
+
                       <li className="menu-item">
                         <Link href="/#news" passHref>
                           <a>News</a>
