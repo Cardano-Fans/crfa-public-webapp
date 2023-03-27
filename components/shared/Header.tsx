@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
                 </Link>
               </li>
               <li className="nav-link">
-                <Link href="/showcase" passHref>
+                <Link href="/our-work" passHref>
                   <a>Showcase</a>
                 </Link>
               </li>
