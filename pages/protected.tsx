@@ -39,7 +39,7 @@ const Home: NextPage = () => {
 
         {premiumAccessStatus === 'denied' && (
           <div className="text-white">
-            This is premium content, to access you should buy CRFA token.
+            This is premium content, to access you should get CRFA token.
           </div>
         )}
       </section>
