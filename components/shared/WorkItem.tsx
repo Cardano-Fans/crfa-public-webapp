@@ -21,11 +21,21 @@ export const WorkItem: React.FC<WorkItemProps> = ({
       <div className="bg-card shadow rounded-lg post-card overflow-hidden">
         <div className="p-4">
 
-        {img_uri && (
-            <div className="flex justify-center mb-4">
+        {img_uri ? (
+            <div className="flex justify-center">
               <Image
                 src={img_uri}
-                alt="{title} image"
+                alt="{title} logo"
+                width={96}
+                height={96}
+                className="rounded-full mb-4"
+              />
+            </div>
+          ) : (
+            <div className="flex justify-center">
+              <Image
+                src="/logo192.png"
+                alt="CRFA logo"
                 width={96}
                 height={96}
                 className="rounded-full mb-4"
@@ -33,7 +43,7 @@ export const WorkItem: React.FC<WorkItemProps> = ({
             </div>
           )}
 
-          <h2 className="text-lg font-bold text-slate-100 mb-2 underline underline-offset-2">{title}</h2>
+          <h2 className="text-lg font-bold text-slate-100 mb-2">{title}</h2>
           <p className="text-gray-400 mb-4">{description}</p>
           <a
             href={link}

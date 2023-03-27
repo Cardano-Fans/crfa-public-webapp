@@ -22,7 +22,7 @@ const OurWork: NextPage = () => {
 
       <div className="container mx-auto my-10 px-4 mt-20 mb-48">
 
-      <h3 className="text-slate-50 font-bold slide-card-title mb-4">Websites:</h3>
+      <h3 className="text-slate-50 font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h3>
 
 
       <div className="flex flex-wrap -mx-4">
@@ -43,7 +43,7 @@ const OurWork: NextPage = () => {
              />
       </div>
 
-      <h2 className="text-slate-100 font-bold slide-card-title mb-4">Open Source:</h2>
+      <h2 className="text-slate-100 font-bold slide-card-title mb-4 underline underline-offset-2">Open Source:</h2>
       <div className="flex flex-wrap -mx-4">
         <WorkItem
             title="Acca"
@@ -56,9 +56,15 @@ const OurWork: NextPage = () => {
         <WorkItem 
             title='CRFA Block Checker'
             description='SPO tool written in Ruby to regularly check if blocks are made according to the leaderlogs.'
-            img_uri='/osi.png'
             link='https://github.com/Cardano-Fans/crfa-block-checker'
             link_text='github.com/Cardano-Fans/crfa-block-checker'
+             />
+
+        <WorkItem 
+            title='CRFA Public Webapp'
+            description='Demonstration how to do a react app with wallet connector.'
+            link='https://github.com/Cardano-Fans/crfa-public-webapp'
+            link_text='github.com/Cardano-Fans/crfa-public-webapp'
              />
 
         <WorkItem 
@@ -80,7 +86,6 @@ const OurWork: NextPage = () => {
           <WorkItem 
             title="CRFA dApp Offchain Registry"
             description='CRFA Offchain Registry that powers DappsOnCardano.com.'
-            img_uri='/osi.png'
             link='https://github.com/Cardano-Fans/crfa-offchain-data-registry'
             link_text='github.com/Cardano-Fans/crfa-offchain-data-registry'
              />
@@ -88,7 +93,6 @@ const OurWork: NextPage = () => {
           <WorkItem 
             title="CRFA Metadata Service"
             description='Microservice that serves data from CRFA dApp Offchain Registry.'
-            img_uri='/osi.png'
             link='https://github.com/Cardano-Fans/crfa-metadata-service'
             link_text='github.com/Cardano-Fans/crfa-metadata-service'
              />
@@ -96,14 +100,14 @@ const OurWork: NextPage = () => {
           <WorkItem 
             title="CRFA Prometheus Gateway"
             description='Ruby microservice that exposes cardano data from cardano-node via prometheus.'
-            img_uri='/osi.png'
+            img_uri='/prometheus.png'
             link='https://github.com/Cardano-Fans/crfa-prometheus-web-gateway'
             link_text='github.com/Cardano-Fans/crfa-prometheus-web-gateway'
              />
 
       </div>
 
-      <h2 className="text-slate-100 font-bold slide-card-title mb-4">Infrastructure:</h2>
+      <h2 className="text-slate-100 font-bold slide-card-title mb-4 underline underline-offset-2">Infrastructure:</h2>
 
       <div className="flex flex-wrap -mx-4">
 
