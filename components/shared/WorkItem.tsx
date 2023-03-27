@@ -17,28 +17,28 @@ export const WorkItem: React.FC<WorkItemProps> = ({
   link_text,
 }: WorkItemProps) => {
   return (
-    <div className="w-full md:w-1/3 px-4 mb-8">
-      <div className="bg-card shadow rounded-lg post-card overflow-hidden">
+    <div className="w-full md:w-1/3 px-4 mb-2">
+      <div className="bg-card shadow rounded-lg post-card overflow-hidden mb-2">
         <div className="p-4">
 
         {img_uri ? (
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-6">
               <Image
                 src={img_uri}
                 alt="{title} logo"
                 width={96}
                 height={96}
-                className="rounded-full mb-4"
+                className="rounded-full"
               />
             </div>
           ) : (
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-6">
               <Image
                 src="/logo192.png"
                 alt="CRFA logo"
                 width={96}
                 height={96}
-                className="rounded-full mb-4"
+                className="rounded-full"
               />
             </div>
           )}
