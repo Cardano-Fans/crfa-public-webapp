@@ -36,6 +36,7 @@ export const AboutPool: React.FC = () => {
           </div>
 
           <div className="flex items-center justify-center w-full lg:w-1/2">
+
             <Swiper
               effect={'creative'}
               pagination={{
@@ -55,6 +56,16 @@ export const AboutPool: React.FC = () => {
               }}
             >
               <SwiperSlide>
+                <Slide title=''>
+                  <div>
+                    <a href="https://cexplorer.io/pool/pool1d3gckjrphwytzw2uavgkxskwe08msumzsfj4lxnpcnpks3zjml3" rel="noreferrer" target="_blank">
+                      <img src="https://js.cexplorer.io/img/p-b-1/pool1d3gckjrphwytzw2uavgkxskwe08msumzsfj4lxnpcnpks3zjml3.jpg" />
+                    </a>
+                  </div>
+                </Slide>
+              </SwiperSlide>
+
+              <SwiperSlide>
                 <Delegation />
               </SwiperSlide>
 
@@ -70,12 +81,13 @@ export const AboutPool: React.FC = () => {
 
               <SwiperSlide>
                 <Slide title="Hardware">
-                  WE ARE RUNNING CARDANOFANS STAKING POOL ON BAREMETAL WITH TWO
-                  RELAY NODES AND ONE BLOCK PRODUCING, LINK 200 MBIT
+                  We are using a mixture of on-premise and cloud based setup. Normally block producer is running in the cloud AND
+                  in case of emergency we can switch to on-premise instance.
                   <br />
                   <br />
-                  Baremetal stakepool with 200 Mbit fiber running on Intel i3
-                  and 2 x Intel i7 servers ( 3 x 16 GB RAM)
+                  Cloud instances have all at least 16 GB RAM and running on 10 GB connection.
+                  Our on-premise nodes have NVMes / 16 GB RAM and are running on 200 Mbit
+                  cable connection with a dedicated static IP.
                 </Slide>
               </SwiperSlide>
 

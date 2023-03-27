@@ -2,6 +2,7 @@ import toast from 'react-hot-toast'
 import { Slide } from './Slide'
 import { copyToClipboard } from '../../../utils/copyToClipboard'
 import { DelegateButton } from '@features/wallet'
+
 const POOL_ID = '6c518b4861bb88b1395ceb116342cecbcfb8736282655f9a61c4c368'
 
 export const Delegation: React.FC = () => {

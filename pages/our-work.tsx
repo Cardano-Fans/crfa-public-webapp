@@ -24,7 +24,6 @@ const OurWork: NextPage = () => {
 
       <h3 className="text-slate-50 font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h3>
 
-
       <div className="flex flex-wrap -mx-4">
         <WorkItem 
             title='DappsOnCardano.com'
