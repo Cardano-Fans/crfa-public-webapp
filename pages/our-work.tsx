@@ -17,117 +17,124 @@ const OurWork: NextPage = () => {
       <Head>
         <title>Our Work</title>
       </Head>
- 
+
       <Header />
 
       <div className="container mx-auto my-10 px-4 mt-20 mb-48">
 
-      <h3 className="text-slate-50 font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h3>
+        <h3 className="text-slate-50 font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h3>
 
-      <div className="flex flex-wrap -mx-4">
-        <WorkItem 
+        <div className="flex flex-wrap -mx-4">
+          <WorkItem
             title='DappsOnCardano.com'
             description='dApps Explorer co-authored with ADRIA stake pool.'
             img_uri='/DappsOnCardano.jpeg'
             link='https://DappsOnCardano.com'
             link_text='DappsOnCardano.com'
-             />
+          />
 
-        <WorkItem 
+          <WorkItem
             title='Cardano Blockchain Insights'
             description='Cardano Blockchain Insights is a Cardano explorer of various blockchain metrics.'
             img_uri='/CardanoBlockchainInsights.jpeg'
             link='/cardano-blockchain-insight'
             link_text='Cardano Blockchain Insights'
-             />
-      </div>
+          />
+        </div>
 
-      <h2 className="text-slate-100 font-bold slide-card-title mb-4 underline underline-offset-2 mt-4">Open Source:</h2>
-      <div className="flex flex-wrap -mx-4">
-        <WorkItem
+        <h2 className="text-slate-100 font-bold slide-card-title mb-4 underline underline-offset-2 mt-4">Open Source:</h2>
+        <div className="flex flex-wrap -mx-4">
+          <WorkItem
             title="Acca"
             description='An alternative standard library for Aiken smart contract programmning language.'
-            img_uri='/acca.jpeg'
+            img_uri='/acca.png'
             link='https://github.com/Cardano-Fans/acca'
             link_text='Cardano-Fans/acca'
-             />
+          />
 
-        <WorkItem 
+          <WorkItem
             title='CRFA Block Checker'
             description='SPO tool written in Ruby to regularly check if blocks are made according to the leaderlogs.'
             link='https://github.com/Cardano-Fans/crfa-block-checker'
             link_text='Cardano-Fans/crfa-block-checker'
-             />
+          />
 
-        <WorkItem 
+          <WorkItem
             title='CRFA Public Webapp'
             description='Demonstration how to do a react app with wallet connector.'
             link='https://github.com/Cardano-Fans/crfa-public-webapp'
             link_text='Cardano-Fans/crfa-public-webapp'
-             />
+          />
 
-        <WorkItem 
+          <WorkItem
             title='Demeter Run Java Starter Kit'
             description='Demeter template to start Cardano Plutus development with Java.'
             img_uri='/demeter_run.jpeg'
             link='https://demeter.run/code?repository=https://github.com/Cardano-Fans/demeter-java-starter-kit&template=java&source=demeter&key=java-starter-kit'
             link_text='Demeter Run Java Starter Kit'
-             />
+          />
 
-        <WorkItem 
+          <WorkItem
             title="Demeter Run Java Plutus V2 Starter Kit"
             description='Demeter template to start Offchain Cardano Plutus V2 development with Java.'
             img_uri='/demeter_run.jpeg'
             link='https://demeter.run/code?repository=https://github.com/Cardano-Fans/demeter-java-plutus-v2-starter-kit&template=java&source=demeter&key=demeter-java-plutus-v2-starter-kit'
             link_text='Demeter Run Java Plutus V2 Starter Kit'
-             />
+          />
 
-          <WorkItem 
+          <WorkItem
             title="CRFA dApp Offchain Registry"
             description='CRFA Offchain Registry that powers DappsOnCardano.com.'
             link='https://github.com/Cardano-Fans/crfa-offchain-data-registry'
             link_text='Cardano-Fans/crfa-offchain-data-registry'
-             />
+          />
 
-          <WorkItem 
+          <WorkItem
             title="CRFA Metadata Service"
             description='Microservice that serves data from CRFA dApp Offchain Registry.'
             link='https://github.com/Cardano-Fans/crfa-metadata-service'
             link_text='Cardano-Fans/crfa-metadata-service'
-             />
+          />
 
-          <WorkItem 
+          <WorkItem
             title="CRFA Prometheus Gateway"
             description='Ruby microservice that exposes cardano data from cardano-node via prometheus.'
             img_uri='/prometheus.png'
             link='https://github.com/Cardano-Fans/crfa-prometheus-web-gateway'
             link_text='Cardano-Fans/crfa-prometheus-web-gateway'
-             />
+          />
 
-      </div>
+          <WorkItem
+            title="CRFA Donation App"
+            description='Micrometer app showing how to build a simple backend app with sql lite using Cardano.'
+            link='https://github.com/Cardano-Fans/crfa-cardano-donation-app'
+            link_text='Cardano-Fans/crfa-cardano-donation-app'
+          />
 
-      <h2 className="text-slate-100 font-bold slide-card-title mb-4 underline underline-offset-2">Infrastructure:</h2>
+        </div>
 
-      <div className="flex flex-wrap -mx-4">
+        <h2 className="text-slate-100 font-bold slide-card-title mb-4 underline underline-offset-2">Infrastructure:</h2>
 
-        <WorkItem 
+        <div className="flex flex-wrap -mx-4">
+
+          <WorkItem
             title='CRFA Freeloaderz Submit Service'
             description='Dedicated one of our cardano nodes to take part in transactions load balancing in Europe.'
             img_uri='/FreeLoaderz.png'
             link='https://freeloaderz.io'
             link_text='FreeLoaderz.io'
-             />
+          />
 
-        <WorkItem 
+          <WorkItem
             title="Milkomeda's validator"
             description="We've been choosen to validate blocks on Milkomeda (Cardano's EVM sidechain)."
             img_uri='/milkomeda.webp'
             link='https://milkomeda.com'
             link_text='milkomeda.com'
-             />
-      </div>
+          />
+        </div>
 
-    </div>
+      </div>
 
       <Footer />
     </div>
