@@ -18,7 +18,7 @@ export const WorkItem: React.FC<WorkItemProps> = ({
 }: WorkItemProps) => {
   return (
     <div className="w-full md:w-1/3 px-4 mb-2">
-      <div className="bg-card shadow rounded-lg post-card overflow-hidden mb-2">
+      <div className="bg-card slide-card shadow rounded-lg post-card overflow-hidden mb-2">
         <div className="p-4">
 
         {img_uri ? (

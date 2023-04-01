@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="rounded-full w-60 h-40 c-white flex items-center justify-center text-center" style={{ background: "rgba(255,255,255, .04)" }}>
-            slide card color<br />
+            slide-card<br />
             rgba(255,255,255, .04)
           </div>
 

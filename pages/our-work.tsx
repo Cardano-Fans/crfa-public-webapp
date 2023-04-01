@@ -22,7 +22,7 @@ const OurWork: NextPage = () => {
 
       <div className="container mx-auto my-10 px-4 mt-20 mb-48">
 
-        <h3 className="text-slate-50 font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h3>
+        <h3 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h3>
 
         <div className="flex flex-wrap -mx-4">
           <WorkItem
@@ -42,7 +42,7 @@ const OurWork: NextPage = () => {
           />
         </div>
 
-        <h2 className="text-slate-100 font-bold slide-card-title mb-4 underline underline-offset-2 mt-4">Open Source:</h2>
+        <h2 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2 mt-4">Open Source:</h2>
         <div className="flex flex-wrap -mx-4">
           <WorkItem
             title="Acca"
@@ -113,7 +113,7 @@ const OurWork: NextPage = () => {
 
         </div>
 
-        <h2 className="text-slate-100 font-bold slide-card-title mb-4 underline underline-offset-2">Infrastructure:</h2>
+        <h2 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Infrastructure:</h2>
 
         <div className="flex flex-wrap -mx-4">
 
