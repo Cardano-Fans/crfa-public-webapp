@@ -28,27 +28,28 @@ export const BlockchainInsights: React.FC = () => {
             />
           </div>
           <div className="w-full lg:w-1/2">
-            <Link passHref href="/cardano-blockchain-insight/">
-              <a>
-                <img
-                  className="w-100 rounded-md"
-                  src="/ada-fans-cardano.png"
-                  alt="zoom in"
-                  data-aos="zoom-in"
-                />
-              </a>
+            <Link
+              href="/cardano-blockchain-insight/"
+              className="w-100 rounded-md"
+              passHref
+            >
+              <img
+                className="w-100 rounded-md"
+                src="/ada-fans-cardano.png"
+                alt="zoom in"
+                data-aos="zoom-in"
+              />
             </Link>
           </div>
         </div>
-        <Link passHref href="/cardano-blockchain-insight/">
-          <a
-            className="btn-secondary mt-10"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top"
-            data-aos-delay={350}
-          >
-            Get more details
-          </a>
+        <Link
+          href="/cardano-blockchain-insight/"
+          className="btn-secondary mt-10"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top"
+          data-aos-delay={350}
+        >
+          Get more details
         </Link>
       </div>
     </section>
