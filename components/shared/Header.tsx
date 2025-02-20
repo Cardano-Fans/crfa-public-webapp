@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import cx from 'classnames'
+import Image from "next/image";
 import { GithubButton, TwitterButton, TelegramButton } from './SocialButton'
 import {
   SelectWalletModal,
@@ -39,10 +40,11 @@ export const Header: React.FC = () => {
         <div className="lg:container flex justify-between items-center mx-auto pl-6 lg:pl-0 pr-6 lg:pr-0">
           <nav className="flex justify-between items-center pt-2 pb-2 w-full">
             <Link href="/" className="logo-box flex items-center justify-center">
-              <img
+              <Image
                 className="rounded-circle mr-8"
-                style={{ width: 48, height: 48 }}
-                src="/logo192.png"
+                src={"/logo192.png"}
+                width={48}
+                height={48}
                 alt="Cardano Fans Staking Pool - Logo"
               />
               <h5 className="c-white font-semibold">

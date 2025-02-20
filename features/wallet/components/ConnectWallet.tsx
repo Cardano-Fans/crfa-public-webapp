@@ -35,7 +35,7 @@ export const ConnectWallet = (props) => {
 
                 <div className="ml-2 flex items-center bg-white/90 rounded-full p-[2px]">
                   <NextImage
-                    objectFit="contain"
+                    style={{ objectFit: "contain" }}
                     className=""
                     height={22}
                     width={22}
@@ -70,7 +70,7 @@ export const ConnectWallet = (props) => {
                     <div className="flex items-center">
                       <div className="mr-2 flex items-center bg-white/90 rounded-full p-[2px]">
                         <NextImage
-                          objectFit="contain"
+                          style={{ objectFit: "contain" }}
                           className=""
                           height={22}
                           width={22}

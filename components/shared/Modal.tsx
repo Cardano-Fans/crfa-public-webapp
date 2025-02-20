@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { Dialog, DialogBackdrop, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
 import {
   faWindowClose,
   faStopCircle,
@@ -23,7 +23,7 @@ export function Modal({ isOpen, onClose, children, title }: Props) {
           onClose={onClose}
         >
           <div className="min-h-screen px-4 text-center">
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
               enterFrom="opacity-0"
@@ -32,8 +32,8 @@ export function Modal({ isOpen, onClose, children, title }: Props) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-black/30" />
-            </Transition.Child>
+              <DialogBackdrop className="fixed inset-0 bg-black/30" />
+            </TransitionChild>
 
             {/* This element is to trick the browser into centering the modal contents. */}
             <span
@@ -42,7 +42,7 @@ export function Modal({ isOpen, onClose, children, title }: Props) {
             >
               &#8203;
             </span>
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
               enterFrom="opacity-0 scale-95"
@@ -52,12 +52,12 @@ export function Modal({ isOpen, onClose, children, title }: Props) {
               leaveTo="opacity-0 scale-95"
             >
               <div className="relative inline-block w-full max-w-md p-8 my-8 overflow-hidden text-left align-middle transition-all transform bg-slate-900 text-slate-200 shadow-xl rounded-2xl">
-                <Dialog.Title
+                <DialogTitle
                   as="h3"
                   className="text-xl font-medium leading-6 mb-6 tracking-wider"
                 >
                   {title}
-                </Dialog.Title>
+                </DialogTitle>
                 <button
                   className="p-2 absolute top-2 right-2"
                   onClick={onClose}
@@ -70,7 +70,7 @@ export function Modal({ isOpen, onClose, children, title }: Props) {
                 </button>
                 {children}
               </div>
-            </Transition.Child>
+            </TransitionChild>
           </div>
         </Dialog>
       </Transition>
