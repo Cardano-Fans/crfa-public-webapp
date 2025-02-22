@@ -1,5 +1,8 @@
+import { ReactNode } from "react";
+
 type Props = {
-  title: string
+  title: string,
+  children: ReactNode
 }
 
 export const Slide: React.FC<Props> = ({ title, children }) => {
