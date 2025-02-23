@@ -63,10 +63,6 @@ export const AboutPool: React.FC = () => {
               </SwiperSlide> */}
 
               <SwiperSlide>
-                <Delegation />
-              </SwiperSlide>
-
-              <SwiperSlide>
                 <Slide title="Fees / Pledge">
                   2.0% + 900k ADA PLEDGE
                   <br />
@@ -77,13 +73,17 @@ export const AboutPool: React.FC = () => {
               </SwiperSlide>
 
               <SwiperSlide>
+                <Delegation />
+              </SwiperSlide>
+
+              <SwiperSlide>
                 <Slide title="Hardware">
                   We are using a mixture of on-premise and cloud based setup. Normally block producer is running in the cloud AND
                   in case of emergency we can switch to on-premise instance.
                   <br />
                   <br />
                   Cloud instances have all at least 24 GB RAM and running on 10 GB connection.
-                  Our on-premise nodes have NVMes / 32 GB RAM and are running on 200 Mbit
+                  Our on-premise nodes have NVMes / 32 GB RAM and are running on 500 Mbit
                   cable connection with a dedicated static IP.
                 </Slide>
               </SwiperSlide>
