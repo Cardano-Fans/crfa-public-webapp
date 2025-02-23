@@ -52,7 +52,7 @@ export const AboutPool: React.FC = () => {
                 },
               }}
             >
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <Slide title=''>
                   <div>
                     <a href="https://cexplorer.io/pool/pool1d3gckjrphwytzw2uavgkxskwe08msumzsfj4lxnpcnpks3zjml3" rel="noreferrer" target="_blank">
@@ -60,7 +60,7 @@ export const AboutPool: React.FC = () => {
                     </a>
                   </div>
                 </Slide>
-              </SwiperSlide>
+              </SwiperSlide> */}
 
               <SwiperSlide>
                 <Delegation />
@@ -82,8 +82,8 @@ export const AboutPool: React.FC = () => {
                   in case of emergency we can switch to on-premise instance.
                   <br />
                   <br />
-                  Cloud instances have all at least 16 GB RAM and running on 10 GB connection.
-                  Our on-premise nodes have NVMes / 16 GB RAM and are running on 200 Mbit
+                  Cloud instances have all at least 24 GB RAM and running on 10 GB connection.
+                  Our on-premise nodes have NVMes / 32 GB RAM and are running on 200 Mbit
                   cable connection with a dedicated static IP.
                 </Slide>
               </SwiperSlide>
