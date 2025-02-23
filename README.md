@@ -33,7 +33,7 @@ yarn start
 ## Docker prod build
 
 ```
-docker build . -t crfa-public-webapp
+docker build -t crfa-public-webapp .
 ```
 
 ## Docker prod start
