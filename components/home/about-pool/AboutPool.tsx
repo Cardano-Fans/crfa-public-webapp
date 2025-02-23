@@ -1,17 +1,13 @@
 import NextImage from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import { Navigation, Pagination, EffectCreative } from 'swiper/modules'
 // import Swiper core and required modules
-import SwiperCore, { EffectCreative, Pagination, Navigation } from 'swiper'
 
 import { Slide } from './Slide'
 import { Delegation } from './Delegation'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-
-// install Swiper modules
-SwiperCore.use([EffectCreative, Pagination, Navigation])
 
 export const AboutPool: React.FC = () => {
   return (
@@ -38,6 +34,7 @@ export const AboutPool: React.FC = () => {
           <div className="flex items-center justify-center w-full lg:w-1/2">
 
             <Swiper
+              modules={[Navigation, Pagination, EffectCreative]}
               effect={'creative'}
               pagination={{
                 dynamicBullets: true,

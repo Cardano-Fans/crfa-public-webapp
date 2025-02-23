@@ -33,13 +33,13 @@ export const SelectWalletModal: React.FC = () => {
             }}
           >
             <NextImage
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
               height={80}
               width={80}
               src={wallet.logo}
+              className="justify-self-center m-2"
               alt=""
             />
-
             <div className="text-slate-100 text-lg">{wallet.name}</div>
           </button>
         ))}

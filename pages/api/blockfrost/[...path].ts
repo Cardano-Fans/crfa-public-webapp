@@ -4,7 +4,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const endpoint = Array.from(req.query.path).join('/')
+  const pathParam = req.query.path;
+  const endpoint = Array.isArray(pathParam) ? pathParam.join('/') : pathParam || '';
 
   const address = `${process.env.BLOCKFROST_MAINNET_URL}/${endpoint}`
 

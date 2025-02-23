@@ -3,7 +3,7 @@
 CRFA public webapp. It is Next.js application. Read more here: Next.README.md
 
 ```
-yarn install
+yarn install --ignore-engines
 ```
 
 Create .env.local file with the following content:
