@@ -26,14 +26,6 @@ const OurWork: NextPage = () => {
 
         <div className="flex flex-wrap -mx-4">
           <WorkItem
-            title='DappsOnCardano.com'
-            description='dApps Explorer co-authored with ADRIA stake pool.'
-            img_uri='/DappsOnCardano.jpeg'
-            link='https://DappsOnCardano.com'
-            link_text='DappsOnCardano.com'
-          />
-
-          <WorkItem
             title='Cardano Blockchain Insights'
             description='Cardano Blockchain Insights is a Cardano explorer of various blockchain metrics.'
             img_uri='/CardanoBlockchainInsights.jpeg'
@@ -97,6 +89,13 @@ const OurWork: NextPage = () => {
           />
 
           <WorkItem
+            title="Dapps On Cardano"
+            description='Microservice that exposes smart contract statistics on Cardano.'
+            link='https://github.com/Cardano-Fans/crfa-dapp-store-service'
+            link_text='https://github.com/Cardano-Fans/crfa-dapp-store-service'
+          />
+
+          <WorkItem
             title="CRFA Prometheus Gateway"
             description='Ruby microservice that exposes cardano data from cardano-node via prometheus.'
             img_uri='/prometheus.png'
@@ -111,27 +110,6 @@ const OurWork: NextPage = () => {
             link_text='Cardano-Fans/crfa-cardano-donation-app'
           />
 
-        </div>
-
-        <h2 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Infrastructure:</h2>
-
-        <div className="flex flex-wrap -mx-4">
-
-          <WorkItem
-            title='CRFA Freeloaderz Submit Service'
-            description='Dedicated one of our cardano nodes to take part in transactions load balancing in Europe.'
-            img_uri='/FreeLoaderz.png'
-            link='https://freeloaderz.io'
-            link_text='FreeLoaderz.io'
-          />
-
-          <WorkItem
-            title="Milkomeda's validator"
-            description="We've been choosen to validate blocks on Milkomeda (Cardano's EVM sidechain)."
-            img_uri='/milkomeda.webp'
-            link='https://milkomeda.com'
-            link_text='milkomeda.com'
-          />
         </div>
 
       </div>

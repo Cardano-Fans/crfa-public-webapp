@@ -68,7 +68,7 @@ export const AboutPool: React.FC = () => {
 
               <SwiperSlide>
                 <Slide title="Fees / Pledge">
-                  1.99% + 1M ADA PLEDGE
+                  2.0% + 900k ADA PLEDGE
                   <br />
                   <br />
                   LOW FEES AS WE STRONGLY BELIEVE IN ACCESSIBILITY TO FINANCE
