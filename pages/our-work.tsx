@@ -52,6 +52,13 @@ const OurWork: NextPage = () => {
           />
 
           <WorkItem
+            title='CRFA Block Monitor'
+            description='Software to monitor Cardano block producers and switch between primary and secondary for high resilience.'
+            link='https://github.com/Cardano-Fans/crfa-block-monitor'
+            link_text='Cardano-Fans/crfa-block-monitor'
+          />
+
+          <WorkItem
             title='CRFA Public Webapp'
             description='Demonstration how to do a react app with wallet connector.'
             link='https://github.com/Cardano-Fans/crfa-public-webapp'

@@ -37,11 +37,11 @@ export const Header: React.FC = () => {
       <SelectWalletModal />
 
       <header className={cx('header', { 'sticky-header': isSticky })}>
-        <div className="lg:container flex justify-between items-center mx-auto pl-6 lg:pl-0 pr-6 lg:pr-0">
+        <div className="flex justify-between items-center mx-auto pl-6 lg:pl-6 pr-6 lg:pr-6">
           <nav className="flex justify-between items-center pt-2 pb-2 w-full">
             <Link href="/" className="logo-box flex items-center justify-center">
               <Image
-                className="rounded-circle mr-8"
+                className="rounded-circle m-2"
                 src={"/logo192.png"}
                 width={48}
                 height={48}
