@@ -24,7 +24,27 @@ module.exports = {
     ],
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    config.experiments = { ...config.experiments, asyncWebAssembly: true, topLevelAwait: true }
+    config.experiments = { 
+      ...config.experiments, 
+      asyncWebAssembly: true, 
+      topLevelAwait: true,
+      layers: true 
+    }
+    
+    // Handle WASM files
+    config.module.rules.push({
+      test: /\.wasm$/,
+      type: 'webassembly/async',
+    })
+    
+    // Optimize for async WASM
+    if (!isServer) {
+      config.output.environment = {
+        ...config.output.environment,
+        asyncFunction: true,
+      }
+    }
+    
     return config;
   },
 }

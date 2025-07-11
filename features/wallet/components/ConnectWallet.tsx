@@ -54,9 +54,9 @@ export const ConnectWallet = (props) => {
 
           <PopoverPanel
             transition
-            className="absolute z-10 w-screen max-w-sm px-4 mt-3 transition duration-200 ease-in-out transform -translate-x-full right-0 lg:-translate-x-1/2 lg:left-1/2 lg:right-auto"
+            className="absolute z-10 w-80 mt-3 transition duration-200 ease-in-out transform -translate-x-2/3 left-1/2"
           >
-            <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-slate-900 text-slate-200 p-7 border border-slate-800">
+            <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-slate-900 text-slate-200 p-4 border border-slate-800">
               <div className="flex justify-between mb-3">
                 <div className="font-medium">Connected to:</div>
                 <div className="flex items-center">
