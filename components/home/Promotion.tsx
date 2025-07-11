@@ -7,7 +7,7 @@ export const Promotion: React.FC = () => {
             Promotion
           </h2>
           <p className="c-white mb-8">
-            Loyality program for all who delegate your ADA Wallet to Cardano
+            Loyalty program for all who delegate your ADA Wallet to Cardano
             Fans
           </p>
           <a
@@ -16,7 +16,7 @@ export const Promotion: React.FC = () => {
             className="btn rounded mt-10"
             data-aos="fade-up"
             data-aos-delay={350}
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <span className="btn-text-blended">Get more details</span>
           </a>

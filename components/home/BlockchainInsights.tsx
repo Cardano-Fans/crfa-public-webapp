@@ -1,5 +1,38 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+
+const AdaPoolsIframe: React.FC = () => {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient) {
+    return (
+      <div 
+        className="w-full bg-gray-800 rounded flex items-center justify-center text-gray-400"
+        style={{ minHeight: 320 }}
+      >
+        Loading pool statistics...
+      </div>
+    )
+  }
+
+  return (
+    <iframe
+      width="100%"
+      height="100%"
+      style={{ minHeight: 320 }}
+      frameBorder={0}
+      className="rounded-2"
+      src="https://js.adapools.org/widget-dark.html?pool=6c518b4861bb88b1395ceb116342cecbcfb8736282655f9a61c4c368"
+      data-aos="zoom-in"
+      title="AdaPools.org Cardano Fans pool widget"
+    />
+  )
+}
 
 export const BlockchainInsights: React.FC = () => {
   return (
@@ -18,15 +51,7 @@ export const BlockchainInsights: React.FC = () => {
         </p>
         <div className="flex flex-col lg:flex-row gap-8 mb-16">
           <div className="w-full lg:w-1/2">
-            <iframe
-              width="100%"
-              height="100%"
-              style={{ minHeight: 320 }}
-              frameBorder={0}
-              className="rounded-2"
-              src="https://js.adapools.org/widget-dark.html?pool=6c518b4861bb88b1395ceb116342cecbcfb8736282655f9a61c4c368"
-              data-aos="zoom-in"
-            />
+            <AdaPoolsIframe />
           </div>
           <div className="w-full lg:w-1/2">
             <Link

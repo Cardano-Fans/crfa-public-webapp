@@ -38,7 +38,7 @@ export const SelectWalletModal: React.FC = () => {
               width={80}
               src={wallet.logo}
               className="justify-self-center m-2"
-              alt=""
+              alt={`${wallet.name} wallet logo`}
             />
             <div className="text-slate-100 text-lg">{wallet.name}</div>
           </button>

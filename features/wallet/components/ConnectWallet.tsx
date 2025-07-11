@@ -40,7 +40,7 @@ export const ConnectWallet = (props) => {
                     width={22}
                     //@ts-ignore
                     src={config.wallets[wallet.walletKey].logo}
-                    alt=""
+                    alt={`${wallet.displayName} wallet logo`}
                   />
                 </div>
                 <FontAwesomeIcon
@@ -68,7 +68,7 @@ export const ConnectWallet = (props) => {
                       width={22}
                       //@ts-ignore
                       src={config.wallets[wallet.walletKey].logo}
-                      alt=""
+                      alt={`${wallet.displayName} wallet logo`}
                     />
                   </div>
                   {/*@ts-ignore*/}

@@ -38,7 +38,7 @@ const OurWork: NextPage = () => {
         <div className="flex flex-wrap -mx-4">
           <WorkItem
             title="Acca"
-            description='An alternative standard library for Aiken smart contract programmning language.'
+            description='An alternative standard library for Aiken smart contract programming language.'
             img_uri='/acca.png'
             link='https://github.com/Cardano-Fans/acca'
             link_text='Cardano-Fans/acca'
@@ -60,7 +60,7 @@ const OurWork: NextPage = () => {
 
           <WorkItem
             title='CRFA Public Webapp'
-            description='Demonstration how to do a react app with wallet connector.'
+            description='Demonstration of how to build a React app with wallet connector.'
             link='https://github.com/Cardano-Fans/crfa-public-webapp'
             link_text='Cardano-Fans/crfa-public-webapp'
           />
@@ -104,7 +104,7 @@ const OurWork: NextPage = () => {
 
           <WorkItem
             title="CRFA Prometheus Gateway"
-            description='Ruby microservice that exposes cardano data from cardano-node via prometheus.'
+            description='Ruby microservice that exposes Cardano data from cardano-node via Prometheus.'
             img_uri='/prometheus.png'
             link='https://github.com/Cardano-Fans/crfa-prometheus-web-gateway'
             link_text='Cardano-Fans/crfa-prometheus-web-gateway'
@@ -112,7 +112,7 @@ const OurWork: NextPage = () => {
 
           <WorkItem
             title="CRFA Donation App"
-            description='Micrometer app showing how to build a simple backend app with sql lite using Cardano.'
+            description='Micrometer app showing how to build a simple backend app with SQLite using Cardano.'
             link='https://github.com/Cardano-Fans/crfa-cardano-donation-app'
             link_text='Cardano-Fans/crfa-cardano-donation-app'
           />

@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
               data-aos="fade-right"
               data-aos-anchor-placement="top"
             >
-              <span>CARDANOFANS</span>
+              <span>CARDANO FANS</span>
               <br />
               <br />
               Staking Pool

@@ -50,7 +50,7 @@ export const News: React.FC = () => {
           {status === 'error' && (
             <div className="text-white">
               <p className="mb-3">
-                Sorry, we cannot load preview of our blog posts at the moment.
+                Sorry, we cannot load previews of our blog posts at the moment.
               </p>
               <p>
                 But you can always directly check out{' '}

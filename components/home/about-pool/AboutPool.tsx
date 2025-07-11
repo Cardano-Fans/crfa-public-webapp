@@ -26,7 +26,7 @@ export const AboutPool: React.FC = () => {
                 width={373}
                 src="/stakepool-epoch.png"
                 data-aos="zoom-in"
-                alt=""
+                alt="Cardano Fans stake pool epoch performance chart"
               />
             </div>
           </div>
@@ -78,7 +78,7 @@ export const AboutPool: React.FC = () => {
 
               <SwiperSlide>
                 <Slide title="Hardware">
-                  We are using a mixture of on-premise and cloud based setup. Normally block producer is running in the cloud AND
+                  We are using a mixture of on-premise and cloud-based setup. Normally block producer is running in the cloud AND
                   in case of emergency we can switch to on-premise instance.
                   <br />
                   <br />
@@ -90,14 +90,14 @@ export const AboutPool: React.FC = () => {
 
               <SwiperSlide>
                 <Slide title="Monitoring">
-                  WE HAVE SETUP ADVANCED MONITORING WITH ALTERING IN CASE THINGS
+                  WE HAVE SETUP ADVANCED MONITORING WITH ALERTING IN CASE THINGS
                   GET PEAR SHAPED.
                 </Slide>
               </SwiperSlide>
 
               <SwiperSlide>
                 <Slide title="Operators">
-                  WELCOME TO CARDANOFANS CARDANO (CRFA) STAKE POOL. WE ARE
+                  WELCOME TO CARDANO FANS CARDANO (CRFA) STAKE POOL. WE ARE
                   PROFESSIONAL STAKE POOL OPERATORS. WE HAVE BEEN RUNNING LINUX
                   SERVERS (BARE METAL, CLOUD) FOR OVER 15 YEARS NOW.
                 </Slide>
@@ -106,7 +106,7 @@ export const AboutPool: React.FC = () => {
               <SwiperSlide>
                 <Slide title="Involvement">
                   WE STRONGLY BELIEVE THAT FINANCE SHOULD BE AVAILABLE FOR
-                  EVERYONE NOT JUST PRIVILIGED ONES. THERE IS ABOUT 3 BLN PEOPLE
+                  EVERYONE NOT JUST PRIVILEGED ONES. THERE IS ABOUT 3 BILLION PEOPLE
                   THAT ARE CURRENTLY UNBANKED, CARDANO AIMS TO CHANGE THIS AND
                   WE WILL SUPPORT IT VIA RUNNING LOW FEES STAKING POOL.
                 </Slide>

@@ -34,7 +34,7 @@ const BlockchainInsight: NextPage = () => {
             href="https://datastudio.google.com/u/0/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/p_wxcw6g0irc"
             target="_blank"
             className="btn-secondary"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <span className="btn-text-blended">Go to Datastudio</span>
           </a>

@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
                 alt="Cardano Fans Staking Pool - Logo"
               />
               <h5 className="c-white font-semibold">
-                CARDANO.<span className="c-main">FANS</span>
+                CARDANO <span className="c-main">FANS</span>
               </h5>
             </Link>
             <ul className="nav-list hidden lg:flex">
@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
           </nav>
           <div className="mobile-nav lg:hidden">
             <div className="nav-hamburger">
-              <input type="checkbox" />
+              <input type="checkbox" aria-label="Toggle mobile navigation menu" />
               <span />
               <span />
               <span />
