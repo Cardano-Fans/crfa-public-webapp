@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     checkPremiumAccessByToken()
-  }, [])
+  }, [checkPremiumAccessByToken])
 
   return (
     <div>
