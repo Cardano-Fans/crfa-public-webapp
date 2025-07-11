@@ -7,7 +7,7 @@ export const config = {
     },
     typhon: {
       name: 'Typhon',
-      logo: '/wallet-logos/typhon.png',
+      logo: '/wallet-logos/typhon.webp',
       walletKey: 'typhoncip30',
     },
     lace: {

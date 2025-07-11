@@ -8,7 +8,7 @@ type Status = 'idle' | 'loading' | 'loaded' | 'error'
 type Post = {
   link: string
   title: string
-  thumbnail: string
+  thumbnail: string | null
   date: string
 }
 
@@ -101,6 +101,11 @@ export const News: React.FC = () => {
 }
 
 const PostCard: React.FC<{ post: Post }> = ({ post }) => {
+  const [imageError, setImageError] = useState(false)
+  
+  // Use fallback image if thumbnail is null or if there's an error loading the image
+  const imageSrc = post.thumbnail && !imageError ? post.thumbnail : '/cardano-white.png'
+  
   return (
     <div className="bg-card p-8 rounded-md post-card mb-10 h-full">
       <a
@@ -110,11 +115,12 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
         className="mb-2 block"
       >
         <Image
-          src={post.thumbnail}
+          src={imageSrc}
           className="h-52 object-cover w-full mb-6"
-          alt="post cover"
+          alt={post.thumbnail ? "post cover" : "Cardano Fans blog post"}
           width={400}
           height={208}
+          onError={() => setImageError(true)}
         />
 
         <h3 className="text-white text-lg">{post.title}</h3>
