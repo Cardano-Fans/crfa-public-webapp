@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { renderCanvas } from './canvas'
 
 import { DelegateButton } from '@features/wallet'
@@ -45,10 +46,12 @@ export const Hero: React.FC = () => {
             </a> */}
           </div>
           <div className="flex items-center justify-center lg:justify-end w-full lg:w-1/2 mb-10 lg:mb-0">
-            <img
+            <Image
               className="w-1/2 lg:w-3/4 rounded-circle cardano-hero-logo"
               src="/cardano-white.png"
               alt="Cardano Logo"
+              width={400}
+              height={400}
               data-aos="zoom-in"
             />
           </div>

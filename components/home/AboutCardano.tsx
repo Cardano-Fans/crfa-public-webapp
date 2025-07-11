@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const AboutCardano: React.FC = () => {
   return (
     <section id="cardano" className="features py-36 mx-auto">
@@ -49,7 +51,7 @@ const Card = ({ image, title, children, ...rest }) => {
       className="bg-main text-dark p-10 shadow-md rounded-md relative w-full lg:w-1/3"
       {...rest}
     >
-      <img className="mb-4 " src={image} alt="icon" />
+      <Image className="mb-4" src={image} alt="icon" width={64} height={64} />
 
       <h3 className="text-3xl mb-4">{title}</h3>
       <p>{children}</p>

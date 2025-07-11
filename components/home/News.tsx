@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Image from 'next/image'
 import dayjs from 'dayjs'
 
 type Status = 'idle' | 'loading' | 'loaded' | 'error'
@@ -107,10 +108,12 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
         rel="noopener noreferrer"
         className="mb-2 block"
       >
-        <img
+        <Image
           src={post.thumbnail}
           className="h-52 object-cover w-full mb-6"
           alt="post cover"
+          width={400}
+          height={208}
         />
 
         <h3 className="text-white text-lg">{post.title}</h3>
