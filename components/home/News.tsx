@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 import dayjs from 'dayjs'
+import { NewsSkeleton } from '../shared/LoadingSkeleton'
 
 type Status = 'idle' | 'loading' | 'loaded' | 'error'
 type Post = {
@@ -45,7 +46,7 @@ export const News: React.FC = () => {
         </h2>
 
         <div>
-          {status === 'loading' && <p className="text-white">Loading...</p>}
+          {status === 'loading' && <NewsSkeleton />}
           {status === 'error' && (
             <div className="text-white">
               <p className="mb-3">

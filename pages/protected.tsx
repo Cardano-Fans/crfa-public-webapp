@@ -6,6 +6,7 @@ import { useWallet } from '@features/wallet'
 import { Header } from '../components/shared/Header'
 import { Footer } from '../components/shared/Footer'
 import { PricePrediction } from '@components/protected/PricePrediction'
+import { WalletConnectionSkeleton } from '../components/shared/LoadingSkeleton'
 import { useAOS } from '../hooks/useAOS'
 
 const Home: NextPage = () => {
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
 
         {(premiumAccessStatus === 'unknown' ||
           premiumAccessStatus === 'checking') && (
-          <div className="text-3xl text-white">Connecting to wallet...</div>
+          <WalletConnectionSkeleton />
         )}
 
         {premiumAccessStatus === 'granted' && <PricePrediction />}
