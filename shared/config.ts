@@ -5,12 +5,16 @@ export const config = {
       logo: '/wallet-logos/eternl.png',
       walletKey: 'eternl',
     },
-    flint: {
-      name: 'Flint',
-      logo: '/wallet-logos/flint.svg',
-      walletKey: 'flint',
+    typhon: {
+      name: 'Typhon',
+      logo: '/wallet-logos/typhon.png',
+      walletKey: 'typhoncip30',
     },
-    nami: { name: 'Nami', logo: '/wallet-logos/nami.svg', walletKey: 'nami' },
+    lace: {
+      name: 'Lace',
+      logo: '/wallet-logos/lace.webp',
+      walletKey: 'lace',
+    },
     yoroi: {
       name: 'Yoroi',
       logo: '/wallet-logos/yoroi.png',

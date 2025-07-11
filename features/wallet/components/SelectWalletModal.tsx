@@ -32,14 +32,16 @@ export const SelectWalletModal: React.FC = () => {
               setIsOpen(false)
             }}
           >
-            <NextImage
-              style={{ objectFit: "contain" }}
-              height={80}
-              width={80}
-              src={wallet.logo}
-              className="justify-self-center m-2"
-              alt={`${wallet.name} wallet logo`}
-            />
+            <div className="flex items-center justify-center h-20 w-20 mx-auto">
+              <NextImage
+                style={{ objectFit: "contain" }}
+                height={80}
+                width={80}
+                src={wallet.logo}
+                className="max-h-16 max-w-16"
+                alt={`${wallet.name} wallet logo`}
+              />
+            </div>
             <div className="text-slate-100 text-lg">{wallet.name}</div>
           </button>
         ))}

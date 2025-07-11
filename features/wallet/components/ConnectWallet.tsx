@@ -32,12 +32,12 @@ export const ConnectWallet = (props) => {
               >
                 {shortenAddress(wallet.address)}
 
-                <div className="ml-2 flex items-center bg-white/90 rounded-full p-[2px]">
+                <div className="ml-2 flex items-center justify-center bg-white/90 rounded-full p-[2px] h-6 w-6">
                   <NextImage
                     style={{ objectFit: 'contain' }}
-                    className=""
-                    height={22}
-                    width={22}
+                    className="max-h-5 max-w-5"
+                    height={20}
+                    width={20}
                     //@ts-ignore
                     src={config.wallets[wallet.walletKey].logo}
                     alt={`${wallet.displayName} wallet logo`}
@@ -54,18 +54,18 @@ export const ConnectWallet = (props) => {
 
           <PopoverPanel
             transition
-            className="absolute z-10 w-screen max-w-sm px-4 mt-3 transition duration-200 ease-in-out transform -translate-x-1/2 left-1/2"
+            className="absolute z-10 w-screen max-w-sm px-4 mt-3 transition duration-200 ease-in-out transform -translate-x-full right-0 lg:-translate-x-1/2 lg:left-1/2 lg:right-auto"
           >
             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-slate-900 text-slate-200 p-7 border border-slate-800">
               <div className="flex justify-between mb-3">
                 <div className="font-medium">Connected to:</div>
                 <div className="flex items-center">
-                  <div className="mr-2 flex items-center bg-white/90 rounded-full p-[2px]">
+                  <div className="mr-2 flex items-center justify-center bg-white/90 rounded-full p-[2px] h-6 w-6">
                     <NextImage
                       style={{ objectFit: 'contain' }}
-                      className=""
-                      height={22}
-                      width={22}
+                      className="max-h-5 max-w-5"
+                      height={20}
+                      width={20}
                       //@ts-ignore
                       src={config.wallets[wallet.walletKey].logo}
                       alt={`${wallet.displayName} wallet logo`}
