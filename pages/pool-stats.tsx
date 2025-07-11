@@ -52,14 +52,28 @@ const OurPoolStats: NextPage = () => {
         <div>
 
             <Head>
-                <title>Pool Stats</title>
+                <title>Live Cardano Pool Statistics | CRFA Performance Metrics</title>
+                <meta name="description" content="Real-time performance metrics for Cardano Fans staking pool. View blocks produced, rewards, ROA, and detailed pool statistics updated live." />
+                <meta name="keywords" content="cardano pool stats, CRFA statistics, pool performance, ADA rewards, staking metrics, pool blocks" />
+                
+                {/* Open Graph */}
+                <meta property="og:title" content="Live Cardano Pool Statistics | CRFA Performance" />
+                <meta property="og:description" content="Real-time performance metrics and statistics for Cardano Fans staking pool including blocks, rewards, and ROA data." />
+                <meta property="og:image" content="https://cardano.fans/logo192.png" />
+                <meta property="og:url" content="https://cardano.fans/pool-stats" />
+                <meta property="og:type" content="website" />
+                
+                {/* Canonical */}
+                <link rel="canonical" href="https://cardano.fans/pool-stats" />
             </Head>
 
             <Header />
 
             <div className="container mx-auto my-10 px-4 mt-20 mb-48">
 
-                <h3 className="text-slate-50 font-bold slide-card-title mb-4 flex justify-center">Overview:</h3>
+                <h1 className="text-slate-50 font-bold slide-card-title mb-4 flex justify-center">Live Pool Statistics</h1>
+                
+                <h2 className="text-slate-50 font-bold slide-card-title mb-4 flex justify-center">Overview:</h2>
 
                 <div className='mb-8'>
                     <PoolIframe 

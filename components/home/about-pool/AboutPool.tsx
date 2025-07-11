@@ -1,4 +1,5 @@
 import NextImage from 'next/image'
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, EffectCreative } from 'swiper/modules'
 // import Swiper core and required modules
@@ -109,6 +110,10 @@ export const AboutPool: React.FC = () => {
                   EVERYONE NOT JUST PRIVILEGED ONES. THERE IS ABOUT 3 BILLION PEOPLE
                   THAT ARE CURRENTLY UNBANKED, CARDANO AIMS TO CHANGE THIS AND
                   WE WILL SUPPORT IT VIA RUNNING LOW FEES STAKING POOL.
+                  <br /><br />
+                  <Link href="/our-work" className="text-blue-400 hover:text-blue-300 underline">
+                    VIEW OUR OPEN SOURCE PROJECTS
+                  </Link>
                 </Slide>
               </SwiperSlide>
             </Swiper>

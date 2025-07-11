@@ -21,7 +21,19 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Cardano Fans - CRFA: Cardano Fans Staking Pool</title>
+        <title>ADA Price Prediction | Premium Cardano Analytics | Cardano Fans</title>
+        <meta name="description" content="Access premium ADA price predictions and advanced Cardano analytics. Exclusive insights for CRFA token holders and pool delegators." />
+        <meta name="keywords" content="ADA price prediction, cardano analytics, premium content, CRFA token, cardano forecasting" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Premium ADA Price Prediction | Cardano Analytics" />
+        <meta property="og:description" content="Exclusive ADA price predictions and advanced Cardano analytics for token holders and delegators." />
+        <meta property="og:image" content="https://cardano.fans/logo192.png" />
+        <meta property="og:url" content="https://cardano.fans/protected" />
+        <meta property="og:type" content="website" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://cardano.fans/protected" />
       </Head>
 
       <Header />

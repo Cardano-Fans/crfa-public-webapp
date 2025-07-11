@@ -15,14 +15,28 @@ const OurWork: NextPage = () => {
     <div>
 
       <Head>
-        <title>Our Work</title>
+        <title>Cardano Development Projects | Open Source Tools by Cardano Fans</title>
+        <meta name="description" content="Explore Cardano Fans' open source projects: Aiken libraries, monitoring tools, Java SDKs, and blockchain development resources for the Cardano ecosystem." />
+        <meta name="keywords" content="cardano development, open source cardano, aiken library, cardano tools, blockchain development, plutus, smart contracts" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Cardano Development Projects | Open Source Tools" />
+        <meta property="og:description" content="Discover our open source contributions to the Cardano ecosystem including development tools, libraries, and educational resources." />
+        <meta property="og:image" content="https://cardano.fans/logo192.png" />
+        <meta property="og:url" content="https://cardano.fans/our-work" />
+        <meta property="og:type" content="website" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://cardano.fans/our-work" />
       </Head>
 
       <Header />
 
       <div className="container mx-auto my-10 px-4 mt-20 mb-48">
 
-        <h3 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h3>
+        <h1 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Our Development Projects</h1>
+        
+        <h2 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h2>
 
         <div className="flex flex-wrap -mx-4">
           <WorkItem

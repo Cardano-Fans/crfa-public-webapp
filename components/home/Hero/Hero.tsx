@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { renderCanvas } from './canvas'
 
 import { DelegateButton } from '@features/wallet'
@@ -35,15 +36,14 @@ export const Hero: React.FC = () => {
               data-aos-delay={350}
             />
 
-            {/* <a
-              href="#about"
-              className="btn rounded"
-              data-aos="fade-up"
-              data-aos-anchor-placement="top"
-              data-aos-delay={350}
-            >
-              <span className="btn-text-blended">View more</span>
-            </a> */}
+            <div className="flex space-x-4 mt-6">
+              <Link href="/pool-stats" className="btn-secondary">
+                <span className="btn-text-blended">View Pool Stats</span>
+              </Link>
+              <Link href="/our-work" className="btn-secondary">
+                <span className="btn-text-blended">Our Projects</span>
+              </Link>
+            </div>
           </div>
           <div className="flex items-center justify-center lg:justify-end w-full lg:w-1/2 mb-10 lg:mb-0">
             <Image

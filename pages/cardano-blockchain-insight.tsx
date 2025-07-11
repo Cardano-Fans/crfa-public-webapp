@@ -14,7 +14,19 @@ const BlockchainInsight: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Cardano Blockchain Insights - Cardano Fans</title>
+        <title>Cardano Blockchain Insights | Analytics & Metrics Dashboard</title>
+        <meta name="description" content="Comprehensive Cardano blockchain analytics with on-chain and off-chain metrics. Track network evolution, transactions, and ecosystem growth data." />
+        <meta name="keywords" content="cardano analytics, blockchain insights, cardano metrics, on-chain data, cardano statistics, network analysis" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Cardano Blockchain Insights | Analytics Dashboard" />
+        <meta property="og:description" content="Access comprehensive Cardano blockchain analytics with detailed metrics and insights into network evolution and ecosystem growth." />
+        <meta property="og:image" content="https://cardano.fans/logo192.png" />
+        <meta property="og:url" content="https://cardano.fans/cardano-blockchain-insight" />
+        <meta property="og:type" content="website" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://cardano.fans/cardano-blockchain-insight" />
       </Head>
 
       <Header />
