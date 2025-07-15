@@ -2,14 +2,15 @@
 
 HOST=10.0.0.1
 CONTAINER_NAME=crfa-public-webapp
+DEPLOY_DIR=/opt/crfa-public-webapp
 
 # Clean up local files
 rm -f crfa-public-webapp-latest.tar
 rm -f crfa-public-webapp-latest.tar.gz
 
-# Build and save Docker image
-docker build -t crfa-public-webapp .
-docker save -o crfa-public-webapp-latest.tar crfa-public-webapp:latest
+# Build and save Podman image
+podman build -t crfa-public-webapp .
+podman save -o crfa-public-webapp-latest.tar crfa-public-webapp:latest
 gzip crfa-public-webapp-latest.tar
 
 # Clean up remote files
@@ -22,14 +23,18 @@ scp crfa-public-webapp-latest.tar.gz "ubuntu@$HOST:~"
 ssh ubuntu@$HOST "
   # Extract and load new image
   gunzip crfa-public-webapp-latest.tar.gz && 
-  sudo docker load -i crfa-public-webapp-latest.tar && 
+  sudo -u cardano podman load -i crfa-public-webapp-latest.tar && 
   
   # Stop and remove old container
-  sudo docker stop $CONTAINER_NAME || true &&
-  sudo docker rm $CONTAINER_NAME || true &&
+  sudo -u cardano podman stop $CONTAINER_NAME || true &&
+  sudo -u cardano podman rm $CONTAINER_NAME || true &&
+  
+  # Ensure deploy directory exists and is owned by cardano
+  sudo mkdir -p $DEPLOY_DIR &&
+  sudo chown cardano:cardano $DEPLOY_DIR &&
   
   # Start new container with restart policy
-  sudo docker run -d --name $CONTAINER_NAME --restart unless-stopped -p 3000:3000 crfa-public-webapp:latest &&
+  sudo -u cardano podman run -d --name $CONTAINER_NAME --restart unless-stopped -p 3000:3000 crfa-public-webapp:latest &&
   
   # Clean up remote tar file
   rm -f crfa-public-webapp-latest.tar
