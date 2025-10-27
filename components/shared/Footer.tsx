@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { GithubButton, TwitterButton, TelegramButton } from './SocialButton'
 
 export const Footer: React.FC = () => {
@@ -41,8 +42,12 @@ export const Footer: React.FC = () => {
         </div>
       </div>
       <div className="copy-box container mx-auto mt-20">
-        <div className="copy-text c-white text-sm flex justify-center">
-          Copyright © 2025
+        <div className="copy-text c-white text-sm flex justify-center items-center space-x-4">
+          <span>Copyright © 2025</span>
+          <span>•</span>
+          <Link href="/imprint" className="hover:text-blue-300 underline">
+            Imprint
+          </Link>
         </div>
       </div>
     </footer>

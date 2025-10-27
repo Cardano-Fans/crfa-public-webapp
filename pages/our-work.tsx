@@ -35,20 +35,8 @@ const OurWork: NextPage = () => {
       <div className="container mx-auto my-10 px-4 mt-20 mb-48">
 
         <h1 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Our Development Projects</h1>
-        
-        <h2 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Websites:</h2>
 
-        <div className="flex flex-wrap -mx-4">
-          <WorkItem
-            title='Cardano Blockchain Insights'
-            description='Cardano Blockchain Insights is a Cardano explorer of various blockchain metrics.'
-            img_uri='/CardanoBlockchainInsights.jpeg'
-            link='/cardano-blockchain-insight'
-            link_text='Cardano Blockchain Insights'
-          />
-        </div>
-
-        <h2 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2 mt-4">Open Source:</h2>
+        <h2 className="c-main font-bold slide-card-title mb-4 underline underline-offset-2">Open Source:</h2>
         <div className="flex flex-wrap -mx-4">
           <WorkItem
             title="Acca"
