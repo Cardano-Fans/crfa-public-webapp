@@ -76,6 +76,9 @@ export const Header: React.FC = () => {
               <li className="nav-link">
                 <Link href="/#contact">Contact</Link>
               </li>
+              <li className="nav-link">
+                <Link href="/imprint">Imprint</Link>
+              </li>
             </ul>
             <div className="hidden sm:flex lg:mr-0 items-center mr-6">
               <ConnectWallet />
@@ -112,6 +115,9 @@ export const Header: React.FC = () => {
                       </li>
                       <li className="menu-item">
                         <Link href="/#contact">Contact</Link>
+                      </li>
+                      <li className="menu-item">
+                        <Link href="/imprint">Imprint</Link>
                       </li>
                     </ul>
                   </div>

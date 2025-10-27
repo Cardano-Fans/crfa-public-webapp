@@ -22,7 +22,7 @@ const Imprint: NextPage = () => {
 
       <Header />
 
-      <div className="container mx-auto my-10 px-4 mt-20 mb-48">
+      <div className="container mx-auto my-10 px-4 pt-32 mt-20 mb-48">
         <h1 className="c-main font-bold text-4xl mb-8 underline underline-offset-2">Imprint</h1>
 
         <div className="c-white text-lg leading-relaxed space-y-4">
