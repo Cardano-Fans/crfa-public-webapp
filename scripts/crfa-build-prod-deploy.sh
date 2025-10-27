@@ -26,8 +26,9 @@ ssh ubuntu@$HOST "
   sudo -u cardano podman load -i crfa-public-webapp-latest.tar && 
   
   # Stop and remove old container
-  sudo -u cardano podman stop $CONTAINER_NAME || true &&
-  sudo -u cardano podman rm $CONTAINER_NAME || true &&
+  sudo -u cardano podman stop $CONTAINER_NAME || true
+  sleep 5
+  sudo -u cardano podman rm -f $CONTAINER_NAME || true
   
   # Ensure deploy directory exists and is owned by cardano
   sudo mkdir -p $DEPLOY_DIR &&
