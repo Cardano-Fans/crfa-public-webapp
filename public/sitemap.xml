@@ -27,21 +27,21 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Blockchain Insights Page -->
-  <url>
-    <loc>https://cardano.fans/cardano-blockchain-insight</loc>
-    <lastmod>2025-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
+
   <!-- Protected/Premium Page -->
   <url>
     <loc>https://cardano.fans/protected</loc>
     <lastmod>2025-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Imprint Page -->
+  <url>
+    <loc>https://cardano.fans/imprint</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   
 </urlset>
