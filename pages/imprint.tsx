@@ -26,7 +26,7 @@ const Imprint: NextPage = () => {
         <h1 className="c-main font-bold text-4xl mb-8 underline underline-offset-2">Imprint</h1>
 
         <div className="c-white text-lg leading-relaxed space-y-4">
-          <p className="font-semibold text-xl">Cardano Fans</p>
+          <p className="font-semibold text-xl">Cardano Fans - Mateusz Czeladka</p>
           <p>Kolonnenstrasse 8</p>
           <p>10827 Berlin</p>
           <p>Germany</p>
@@ -40,10 +40,10 @@ const Imprint: NextPage = () => {
             <p className="font-semibold">Contact:</p>
             <p>
               <a
-                href="mailto:fanscardano@gmail.com"
+                href="mailto:info@cardano.fans"
                 className="text-blue-400 hover:text-blue-300 underline"
               >
-                fanscardano@gmail.com
+                info@cardano.fans
               </a>
             </p>
           </div>
